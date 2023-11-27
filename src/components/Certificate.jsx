@@ -1,10 +1,7 @@
-import {
-  FavoriteBorderOutlined,
-  SearchOutlined,
-  ShoppingCartOutlined,
-} from "@material-ui/icons";
+import {  SearchOutlined } from "@material-ui/icons";
 import React from "react";
 import styled from "styled-components";
+import { mobile } from "../responsive";
 
 const Info = styled.div`
   opacity: 0;
@@ -13,6 +10,7 @@ const Info = styled.div`
   position: absolute;
   top: 0;
   left: 0;
+  border-radius: 15px;
   background-color: rgba(0, 0, 0, 0.2);
   z-index: 3;
   display: flex;
@@ -24,14 +22,16 @@ const Info = styled.div`
 
 const Container = styled.div`
   flex: 1;
-  margin: 5px;
-  min-width: 280px;
-  height: 350px;
+  margin: 10px;
+  min-width: 220px;
+  height: 250px;
   display: flex;
   align-items: center;
   justify-content: center;
-  background-color: #f5fbfd;
+  background-color: #f6fcf6;
   position: relative;
+  border-radius: 15px;
+  box-shadow: 0.5px 0.5px 0.5px rgba(0, 0, 0, 0.2);
 
   &:hover ${Info} {
     opacity: 1;
@@ -45,9 +45,11 @@ const Circle = styled.div`
   background-color: white;
   position: absolute;
 `;
+
 const Image = styled.img`
-  height: 75%;
+  height: 65%;
   z-index: 2;
+  border-radius: 39%;
 `;
 
 const Icon = styled.div`
@@ -66,24 +68,18 @@ const Icon = styled.div`
   }
 `;
 
-const Product = ({ item }) => {
+const Certificate = ({ item }) => {
   return (
-    <Container>
-      <Circle />
-      <Image src={item.img} />
-      <Info>
-        <Icon>
-          <ShoppingCartOutlined />
-        </Icon>
-        <Icon>
-          <SearchOutlined />
-        </Icon>
-        <Icon>
-          <FavoriteBorderOutlined />
-        </Icon>
-      </Info>
+    <Container onClick={() => window.location = item.link}>
+        <Circle />
+        <Image src={item.img} />
+        <Info>
+          <Icon>
+            <SearchOutlined/>
+          </Icon>
+        </Info>
     </Container>
   );
 };
 
-export default Product;
+export default Certificate;

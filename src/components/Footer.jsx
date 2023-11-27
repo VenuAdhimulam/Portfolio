@@ -21,7 +21,7 @@ const Left = styled.div`
   flex: 1;
   padding: 15px;
   letter-spacing: 2px;
-  background-color: teal;
+  background-color: #191919;
 `;
 
 const Logo = styled.h1`
@@ -51,7 +51,7 @@ const SocialIcon = styled.div`
 const Center = styled.div`
   flex: 1;
   padding: 20px;
-  background-color: teal;
+  background-color: #191919;
   ${mobile({ display: "none" })};
 `;
 
@@ -75,7 +75,7 @@ const ListItem = styled.li`
 const Right = styled.div`
   flex: 1;
   padding: 20px;
-  background-color: teal;
+  background-color: #191919;
   ${mobile({ backgroundColor: "#393939" })};
 `;
 

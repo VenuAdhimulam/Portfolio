@@ -7,6 +7,7 @@ import Footer from "../components/Footer";
 import About from "../components/About";
 import WaverTop from "../components/Waver";
 import WaverBottom from "../components/WaverBottom";
+import Certifications from "../components/Certifications";
 
 const Home = () => {
   return (
@@ -17,6 +18,7 @@ const Home = () => {
       <WaverTop/>
       <About/>
       <WaverBottom/>
+      <Certifications/>
       <Newsletter />
       <Footer />
     </div>

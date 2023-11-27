@@ -10,19 +10,27 @@ const Container = styled.div`
   align-items: center;
   min-height: 100px;
   width: 100%;
-  background: linear-gradient(180deg, #6b2e48, #6b2e48); 
+  background: #c1eec6;
+  // background: linear-gradient(180deg, #c1eec6, #c1eec6); 
   ${mobile({ display: "none" })};
 `;
 
 const ImgContainer = styled.div`
   flex: 1;
   height: 100%;
+  margin: 20px;
+  // background: url('https://img.grouponcdn.com/deal/5EXVDNMDEe1mtyEK6Pgp/ZC-1057x634/v1/c700x420.jpg');
+  background-size: cover;
+  padding: 25px;
+  background-position: center;
+  display: inline-block;
+  overflow: hidden;
 `;
 
 const Image = styled.img`
   height: 300px;
   width: 300px;
-  border-radius: 50%;
+  border-radius: 30%;
   padding: 50px;
 `;
 
@@ -34,43 +42,33 @@ const Wrapper = styled.div`
   height: 90%;
   display: flex;
   transition: all 1.5s ease;
-  padding: 20px 60px;
+  padding: 20px 100px;
   transform: translateX(${(props) => props.slideIndex * -100}vw);
 `;
 
 const Slide = styled.div`
   align-items: center;
   border-radius: 30px;
-  padding: 20px 60px;
-  // background: #fff;
+  padding: 20px 30px;
+  background: #fff;
 `;
-
-const SlideHearder = styled.div`
-  align-items: center;
-  border-radius: 30px;
-  padding: 20px 60px;
-  background: linear-gradient(180deg, #6b2e48, #6b2e48); 
-  `;
 
 const SlideBody = styled.div`
   display: flex;
   align-items: center;
   border-radius: 30px;
   padding: 20px 60px;
-  color: #fff;
 `;
 
 const Title = styled.h1`
-  font-size: 40px;
-  color: #fff;
-  border-top: 2px solid white;
-  border-bottom: 2px solid white;
+  font-size: 50px;
+  padding-bottom: 40px;
 `;
 
 const Desc = styled.p`
   margin: 5xpx 0px;
-  font-size: 25px;
-  font-weight: 500;
+  font-size: 24px;
+  font-weight: 300;
   letter-spacing: 3px;
 `;
 
@@ -80,15 +78,12 @@ const About = () => {
             <Wrapper>
                 {aboutData.map((item) => (
                     <Slide bg={item.bg} key={item.id}>
-                      <SlideHearder>
-                        <Title>{item.title}</Title>
-                      </SlideHearder>
                       <SlideBody>
                         <ImgContainer>
-                            {/* <Title>{item.title}</Title> */}
                             <Image src={item.img} />
                         </ImgContainer>
                         <InfoContainer>
+                            <Title>{item.title}</Title>
                             <Desc>{item.desc}</Desc>
                         </InfoContainer>
                       </SlideBody>

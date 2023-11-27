@@ -1,8 +1,8 @@
 import styled from 'styled-components';
-import waves from "../images/waves3.svg";
+import waves from "../images/greenWavesBottom.svg";
 
 const Spacer = styled.div`
-  aspect-ratio: 960/150;
+  aspect-ratio: 960/300;
   width: 100%;
   background-repeat: no-repeat;
   background-position: center;

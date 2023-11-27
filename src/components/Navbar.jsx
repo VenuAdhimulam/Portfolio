@@ -10,6 +10,9 @@ const Container = styled.div`
   padding-left: 140px; 
   padding-right: 140px; 
   border-bottom: 1px solid black;
+  // background: #c1eec6;
+  background: linear-gradient(250deg, #c1eec6, #FFF);
+
   ${mobile({ height: "50px" })}
 `;
 
@@ -80,7 +83,7 @@ const Navbar = () => {
       <Wrapper>
         <Left>
           <Logo>
-            <strong>Port<span style={{color: "#8e62ba"}}>Folio</span></strong>
+            <strong>Port<span style={{color: "#ADD6B2"}}>Folio</span></strong>
           </Logo>
         </Left>
         <Center>

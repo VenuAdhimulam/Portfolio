@@ -1,3 +1,9 @@
+import AWS_Logo from "./images/AWS_Cloud_Computing.png";
+import Hackerrank_Logo from "./images/Hackerrank_Logo.png";
+import Python_Logo from "./images/Python_Logo.png";
+import SQL_Logo from "./images/SQL_Logo.svg";
+import Udemy_Logo from "./images/Udemy_Logo.png";
+
 export const sliderItems = [
   {
     id: 1,
@@ -12,8 +18,8 @@ export const aboutData = [
   {
     id: 1,
     title: "About Me",
-    img: "https://www.kindpng.com/picc/m/90-907750_shopping-cartoon-women-png-image-high-quality-clipart.png",
-    desc: "I'm Software Engineer. Lorem ipsum is placeholder text commonly used in the graphic, print, and publishing industries for previewing layouts and visual mockups.",
+    img: Python_Logo,
+    desc: "I'm a Software Engineer known for building sophisticated web applications, adhering to best practices in software development, producing readable code, and eager to continue learning.",
     bg: "#f7f7f7",
   }
 ];
@@ -31,38 +37,48 @@ export const categories = [
   },
 ];
 
-export const popularProducts = [
+export const certifications = [
   {
     id: "1",
-    img: "https://www.kindpng.com/picc/m/298-2982117_t-shirt-clip-art-cartoon-t-shirt-clip.png",
+    title: "AWS Educate Introduction to Cloud 101",
+    date: "Aug 05, 2023",
+    img: AWS_Logo,
+    link: "https://www.credly.com/badges/2e61b3c9-1592-4f42-abaf-28026cc3ce06/linked_in_profile",
   },
   {
     id: "2",
-    img: "https://www.kindpng.com/picc/m/298-2982117_t-shirt-clip-art-cartoon-t-shirt-clip.png",
+    title: "Microservices with Spring Boot, Spring Cloud, Docker, K8s",
+    date: "Oct 01, 2023",
+    img: Udemy_Logo,
+    link: "https://www.udemy.com/certificate/UC-c3601bb5-f397-4c4b-93da-5096eea254bd/",
   },
   {
     id: "3",
-    img: "https://www.kindpng.com/picc/m/298-2982117_t-shirt-clip-art-cartoon-t-shirt-clip.png",
+    title: "Problem Solving (Basic)",
+    date: "Aug 04, 2023",
+    img: Hackerrank_Logo,
+    link: "https://www.hackerrank.com/certificates/08f93a6d7d34",
   },
   {
     id: "4",
-    img: "https://www.kindpng.com/picc/m/298-2982117_t-shirt-clip-art-cartoon-t-shirt-clip.png",
+    title: "Python (Basic)",
+    date: "Sept 11, 2023",
+    img: Python_Logo,
+    link: "https://www.hackerrank.com/certificates/d81ddbaeb8f1",
   },
   {
     id: "5",
-    img: "https://www.kindpng.com/picc/m/298-2982117_t-shirt-clip-art-cartoon-t-shirt-clip.png",
+    title: "SQL (Basic) Certificate",
+    date: "Jul 27, 2023",
+    img: SQL_Logo,
+    link: "https://www.hackerrank.com/certificates/59472e891f43",
   },
   {
     id: "6",
-    img: "https://www.kindpng.com/picc/m/298-2982117_t-shirt-clip-art-cartoon-t-shirt-clip.png",
-  },
-  {
-    id: "7",
-    img: "https://www.kindpng.com/picc/m/298-2982117_t-shirt-clip-art-cartoon-t-shirt-clip.png",
-  },
-  {
-    id: "8",
-    img: "https://www.kindpng.com/picc/m/298-2982117_t-shirt-clip-art-cartoon-t-shirt-clip.png",
+    title: "SQL (Intermediate) Certificate",
+    date: "Aug 02, 2023",
+    img: SQL_Logo,
+    link: "https://www.hackerrank.com/certificates/7a9715856f2f",
   },
 ];
 

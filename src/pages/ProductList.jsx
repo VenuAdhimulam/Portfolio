@@ -4,7 +4,7 @@ import Announcemnet from "../components/Announcemnet";
 import Footer from "../components/Footer";
 import Navbar from "../components/Navbar";
 import Newsletter from "../components/Newsletter";
-import Products from "../components/Products";
+// import Products from "../components/Products";
 
 const Container = styled.div``;
 const Title = styled.h1`
@@ -71,7 +71,7 @@ const ProductList = () => {
           </Select>
         </Filter>
       </FilterContainer>
-      <Products />
+      {/* <Products /> */}
       <Newsletter />
       <Footer />
     </Container>
