@@ -2,6 +2,7 @@ import styled from "styled-components";
 import React from "react";
 import { aboutData } from "../data";
 import { mobile } from "../responsive";
+import Blob from "../images/graph.png"
 
 const Container = styled.div`
   position: relative;
@@ -17,21 +18,24 @@ const Container = styled.div`
 
 const ImgContainer = styled.div`
   flex: 1;
-  height: 100%;
-  margin: 20px;
-  // background: url('https://img.grouponcdn.com/deal/5EXVDNMDEe1mtyEK6Pgp/ZC-1057x634/v1/c700x420.jpg');
+  width: 400px;
+  height: 400px;
+  margin: 10px;
   background-size: cover;
-  padding: 25px;
+  padding: 30px;
+  background: url(${props => props.imageUrl}) center/cover; 
   background-position: center;
-  display: inline-block;
-  overflow: hidden;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 `;
 
 const Image = styled.img`
   height: 300px;
   width: 300px;
   border-radius: 30%;
-  padding: 50px;
+  z-index: 2;
+  padding: 20px;
 `;
 
 const InfoContainer = styled.div`
@@ -39,7 +43,7 @@ const InfoContainer = styled.div`
 `;
 
 const Wrapper = styled.div`
-  height: 90%;
+  height: 100%;
   display: flex;
   transition: all 1.5s ease;
   padding: 20px 100px;
@@ -47,10 +51,13 @@ const Wrapper = styled.div`
 `;
 
 const Slide = styled.div`
+  display: flex;
   align-items: center;
+  justify-content: center;
   border-radius: 30px;
-  padding: 20px 30px;
+  padding: 30px 60px;
   background: #fff;
+  box-shadow: 0.5px 0.5px 0.5px rgba(0, 0, 0, 0.4);
 `;
 
 const SlideBody = styled.div`
@@ -67,9 +74,10 @@ const Title = styled.h1`
 
 const Desc = styled.p`
   margin: 5xpx 0px;
-  font-size: 24px;
+  font-size: 23px;
   font-weight: 300;
-  letter-spacing: 3px;
+  letter-spacing: 4px;
+  text-align: justify;
 `;
 
 const About = () => {
@@ -79,7 +87,7 @@ const About = () => {
                 {aboutData.map((item) => (
                     <Slide bg={item.bg} key={item.id}>
                       <SlideBody>
-                        <ImgContainer>
+                        <ImgContainer imageUrl={Blob}>
                             <Image src={item.img} />
                         </ImgContainer>
                         <InfoContainer>

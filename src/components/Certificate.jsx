@@ -31,7 +31,7 @@ const Container = styled.div`
   background-color: #f6fcf6;
   position: relative;
   border-radius: 15px;
-  box-shadow: 0.5px 0.5px 0.5px rgba(0, 0, 0, 0.2);
+  box-shadow: 0.5px 0.5px 0.5px rgba(0, 0, 0, 0.4);
 
   &:hover ${Info} {
     opacity: 1;
@@ -39,15 +39,15 @@ const Container = styled.div`
 `;
 
 const Circle = styled.div`
-  width: 200px;
-  height: 200px;
+  width: 150px;
+  height: 150px;
   border-radius: 50%;
   background-color: white;
   position: absolute;
 `;
 
 const Image = styled.img`
-  height: 65%;
+  height: 50%;
   z-index: 2;
   border-radius: 39%;
 `;

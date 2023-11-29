@@ -3,6 +3,7 @@ import Hackerrank_Logo from "./images/Hackerrank_Logo.png";
 import Python_Logo from "./images/Python_Logo.png";
 import SQL_Logo from "./images/SQL_Logo.svg";
 import Udemy_Logo from "./images/Udemy_Logo.png";
+import Mize_Logo from "./images/Mize_Logo.jpg";
 
 export const sliderItems = [
   {
@@ -19,7 +20,9 @@ export const aboutData = [
     id: 1,
     title: "About Me",
     img: Python_Logo,
-    desc: "I'm a Software Engineer known for building sophisticated web applications, adhering to best practices in software development, producing readable code, and eager to continue learning.",
+    desc: `I'm a Software Engineer known for building sophisticated web applications,
+           adhering to best practices in software development, 
+           producing readable code, and eager to continue learning.`,
     bg: "#f7f7f7",
   }
 ];
@@ -34,6 +37,76 @@ export const categories = [
     id: "2",
     img: "http://intomodeling.com/img/commercial_mobile.jpg",
     title: "LOUNGE LOVE",
+  },
+];
+
+export const experiences = [
+  {
+    id: "1",
+    role: "Full Stack Engineer",
+    company: "Drughelp.care ",
+    date: "Jul 2022 – May 2023",
+    img: Python_Logo,
+    desc: {
+      points: [ 
+        "• At Cleveland State University, I worked as a Full Stack Engineer on Drughelp.Care, a research project and free website designed to assist individuals affected by the opioid crisis.",
+        "• Designed, developed, and deployed a chatbot feature on website to aid and support to visitors.",
+        "• Enhanced website performance by +40% through the integration of Google Analytics to track website trafic and user behavior.",
+      ],
+    },
+    link: "https://www.hackerrank.com/certificates/d81ddbaeb8f1",
+  },
+  // {
+  //   id: "2",
+  //   role: "Engagement Ambassador",
+  //   company: "Ruffalo Noel Levitz",
+  //   date: "Feb 2022 – June 2022",
+  //   img: Python_Logo,
+  //   desc: "",
+  //   link: "https://www.hackerrank.com/certificates/d81ddbaeb8f1",
+  // },
+  {
+    id: "3",
+    role: "Application Development Analyst",
+    company: "Accenture",
+    date: "Aug 2021 – Dec 2021",
+    img: Python_Logo,
+    desc: {
+      points: [
+        "• My role & responsibilities at Accenture included creating, testing, and implementing software applications that fulfilled JPMC's (Client) specific business needs.",
+        "• During my tenure, I collaborated with JPMC stakeholders to understand their needs and developed software solutions using JAVA 8, SPRING BOOT, REACT etc.",
+      ],
+    },
+    link: "https://www.hackerrank.com/certificates/d81ddbaeb8f1",
+  },
+  {
+    id: "4",
+    role: "Junior Software Engineer",
+    company: "Mize, Inc",
+    date: "Nov 2018 – Jul 2021",
+    img: Mize_Logo,
+    desc: {
+      points: [
+        "• Worked as a key software engineer and provided expertise in SPRINGBOOT, JAVA, HIBERNATE, JAVASCRIPT, REACT and YUI.",
+        "• Assisted Takeuchi (USA & JAPAN), Bluestar and Kohler client projects with the integration of the WARRANTY, REGISTRATION, PRODUCTS, and PLANS smartblox from the Customer Central project into their respective projects.",
+        "• Achieved 30% increase in code quality by optimizing code, addressing critical security issues, and clean code practices.",
+      ],
+    },
+    link: "https://www.hackerrank.com/certificates/d81ddbaeb8f1",
+  },
+  {
+    id: "5",
+    role: "Intern",
+    company: "Ajna Networks",
+    date: "May 2018 – Oct 2018",
+    img: Python_Logo,
+    desc: {
+      points: [
+          "• At Ajna Networks, my primary responsibilities revolved around utilizing front-end technologies to develop dynamic webpages for clients.",
+          "• Through my internship, I gained valuable hands-on experience in front-end development and acquired proficiency in creating effective web pages using diverse tools and technologies.",
+        ],
+      },
+    link: "https://www.hackerrank.com/certificates/d81ddbaeb8f1",
   },
 ];
 

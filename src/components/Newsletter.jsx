@@ -5,7 +5,8 @@ import { mobile } from "../responsive";
 
 const Container = styled.div`
   height: 60vh;
-  background: linear-gradient(360deg, #c1eec6, #FFF);
+  // background: linear-gradient(360deg, #c1eec6, #FFF);
+  background: linear-gradient(180deg, #fff, #FFFFB9, #c1eec6);
   display: flex;
   align-items: center;
   justify-content: center;
