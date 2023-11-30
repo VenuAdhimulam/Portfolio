@@ -4,6 +4,8 @@ import Python_Logo from "./images/Python_Logo.png";
 import SQL_Logo from "./images/SQL_Logo.svg";
 import Udemy_Logo from "./images/Udemy_Logo.png";
 import Mize_Logo from "./images/Mize_Logo.jpg";
+import CSU_Logo from "./images/CSU_Logo.jpeg";
+import VJIT_Logo from "./images/VJIT_Logo.png";
 
 export const sliderItems = [
   {
@@ -13,6 +15,38 @@ export const sliderItems = [
     desc: "Software Engineer",
     bg: "#f7f7f7",
   }
+];
+
+export const eduObj = [
+  {
+    id: 1,
+    degree: "Master of Science",
+    stream: "Computer Science",
+    university: "Cleveland State Univeristy",
+    tenure: "2022 - 2023",
+    logo: CSU_Logo,
+  },
+  {
+    id: 2,
+    degree: "Bachelor of Technology",
+    stream: "Computer Science & Engineering",
+    university: "Vidya Jyothi Institute of Technology",
+    tenure: "2014 - 2018",
+    logo: VJIT_Logo
+  },
+  // {
+  //   id: 3,
+  //   degree: "Associate Degree",
+  //   stream: "MPC",
+  //   university: "Andhra Univeristy",
+  //   logo: Mize_Logo
+  // },
+  // {
+  //   id: 4,
+  //   degree: "",
+  //   university: "",
+  //   logo: Mize_Logo
+  // }
 ];
 
 export const aboutData = [

@@ -2,7 +2,7 @@ import styled from "styled-components";
 import React from "react";
 import { aboutData } from "../data";
 import { mobile } from "../responsive";
-import Blob from "../images/graph.png"
+import Blob from "../images/blob.svg"
 
 const Container = styled.div`
   position: relative;
@@ -74,9 +74,9 @@ const Title = styled.h1`
 
 const Desc = styled.p`
   margin: 5xpx 0px;
-  font-size: 23px;
-  font-weight: 300;
-  letter-spacing: 4px;
+  font-size: 1.5em;
+  font-weight: 400;
+  letter-spacing: 3px;
   text-align: justify;
 `;
 

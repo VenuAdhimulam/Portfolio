@@ -3,6 +3,7 @@ import styled from "styled-components";
 import { sliderItems } from "../data";
 import { mobile } from "../responsive";
 import { Gradient } from "@material-ui/icons";
+import mainLogo from "../images/main_Logo.svg";
 
 const Container = styled.div`
   width: 100%;
@@ -37,15 +38,22 @@ const ColorBlend = styled.div`
 const ImgContainer = styled.div`
   flex: 1;
   height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 `;
 
 const Image = styled.img`
-  height: 90%;
+  height: 70%;
 `;
 
 const InfoContainer = styled.div`
   flex: 1;
-  padding: 50px;
+  // padding: 50px;
+  display: flex;
+  flex-direction: column;
+  // align-items: center;
+  justify-content: center;
 `;
 
 const Title = styled.h1`
@@ -74,11 +82,11 @@ const Slider = () => {
           <>
             <Slide bg={item.bg} key={item.id}>
               <ImgContainer>
-                <Image src={item.img} />
+                <Image src={mainLogo} />
               </ImgContainer>
               <InfoContainer>
                 <Greeting>{item.greeting}</Greeting>
-                <Title>{item.title}</Title>
+                <Title>Venu<span style={{color: "#add6b2"}}> Adimulam</span></Title>
                 <Desc>{item.desc}</Desc>
               </InfoContainer>
             </Slide>

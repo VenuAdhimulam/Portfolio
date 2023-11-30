@@ -9,9 +9,10 @@ const Container = styled.div`
   height: 60px;
   padding-left: 140px; 
   padding-right: 140px; 
-  border-bottom: 1px solid black;
+  // border-bottom: 1px solid black;
   // background: #c1eec6;
-  background: linear-gradient(250deg, #c1eec6, #FFF);
+  color: #000;
+  // background: linear-gradient(250deg, #c1eec6, #FFF, #FFF);
 
   ${mobile({ height: "50px" })}
 `;
@@ -70,6 +71,12 @@ const MenuItems = styled.div`
   fonyt-size: 14px;
   cursor: pointer;
   margin-left: 25px;
+  &:hover {
+
+    text-decoration: 1px solid underline;
+    text-decoration-color: #add6b2;
+    transform: scale(1.1);
+  }
   ${mobile({ fontSize: "12px", marginLeft: "10px" })}
 `;
 
@@ -83,7 +90,7 @@ const Navbar = () => {
       <Wrapper>
         <Left>
           <Logo>
-            <strong>Port<span style={{color: "#ADD6B2"}}>Folio</span></strong>
+            <strong>Port<span style={{color: "#add6b2"}}>Folio</span></strong>
           </Logo>
         </Left>
         <Center>

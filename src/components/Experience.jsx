@@ -58,15 +58,15 @@ function Experience() {
   const paperDiv = {
     textAlign: "left",
     padding: "25px",
-    borderRight: "4px solid #c1eec6",
-    borderLeft: "4px solid #c1eec6"
+    borderRight: "6px solid #c1eec6",
+    borderLeft: "6px solid #c1eec6"
   };
 
   const descTypo = {
     textAlign: "justify",
     marginBottom: "8px",
     color: "rgba(0, 0, 0, 0.66)",
-    fontWeight: 300,
+    fontWeight: 500,
     letterSpacing: "3px",
     fontSize: "1em"
   };

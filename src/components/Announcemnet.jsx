@@ -7,7 +7,7 @@ const Container = styled.div`
   font-size: 14px;
   // background-color: #c1eec6;
   // background: linear-gradient(45deg, #c1eec6, #FFF);
-  border-bottom: 1px solid black;
+  // border-bottom: 1px solid black;
   color: white;
   display: flex;
   justify-content: center;

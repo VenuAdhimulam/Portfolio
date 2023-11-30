@@ -9,6 +9,7 @@ import WaverTop from "../components/Waver";
 import WaverBottom from "../components/WaverBottom";
 import Certifications from "../components/Certifications";
 import Experience from "../components/Experience";
+import Education from "../components/Education";
 
 const Home = () => {
   return (
@@ -20,6 +21,7 @@ const Home = () => {
       <About/>
       <WaverBottom/>
       <Experience/>
+      <Education/>
       <Certifications/>
       <Newsletter />
       <Footer />

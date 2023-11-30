@@ -23,8 +23,8 @@ const Info = styled.div`
 const Container = styled.div`
   flex: 1;
   margin: 10px;
-  min-width: 220px;
-  height: 250px;
+  min-width: 181px;
+  height: 200px;
   display: flex;
   align-items: center;
   justify-content: center;
