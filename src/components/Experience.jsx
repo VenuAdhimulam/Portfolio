@@ -43,6 +43,32 @@ const CardsContainer = styled.div`
   justify-content: space-between;
 `;
 
+const Wrapper = styled.div`
+  display: flex;
+  margin-bottom: 30px;
+  border-bottom: 1px solid #c1eec6;
+`;
+
+const DescDiv = styled.div`
+  flex: 1.5;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: center;
+`;
+
+const LogoDiv = styled.div`
+  flex: 0.5;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+`;
+
+const Logo = styled.img`
+  width: 120px;
+`;
+
 function Experience() {
   const classes = useStyles();
 
@@ -58,31 +84,31 @@ function Experience() {
   const paperDiv = {
     textAlign: "left",
     padding: "25px",
-    borderRight: "6px solid #c1eec6",
-    borderLeft: "6px solid #c1eec6"
+    borderRight: "4px solid #c1eec6",
+    borderLeft: "4px solid #c1eec6"
   };
 
   const descTypo = {
     textAlign: "justify",
-    marginBottom: "8px",
-    color: "rgba(0, 0, 0, 0.66)",
+    marginBottom: "10px",
     fontWeight: 500,
     letterSpacing: "3px",
-    fontSize: "1em"
+    fontSize: "1em",
+    color: "rgba(0, 0, 0, 0.66)"
   };
 
   const compnayTypo = {
-    marginBottom: "10px",
-    fontWeight: 400,
-    fontSize: "1.2rem",
-    letterSpacing: "1.5px"
+    fontWeight: 500,
+    fontSize: "1.4em",
+    letterSpacing: "2px",
   };
 
   const roleTypo = {
     marginBottom: "5px",
-    fontSize: "1.4rem",
-    fontWeight: 600,
-    letterSpacing: "1.5px"
+    fontSize: "1.2em",
+    fontWeight: 500,
+    letterSpacing: "3px",
+    color: "rgba(0, 0, 0, 0.66)"
   };
 
   return (
@@ -103,8 +129,15 @@ function Experience() {
             </TimelineSeparator>
             <TimelineContent>
               <Paper elevation={3} className={classes.paper} style={paperDiv}>
-                <Typography variant="h6" component="h1" style={roleTypo}>{item.role}</Typography>
-                <Typography style={compnayTypo}>{item.company}</Typography>
+                <Wrapper>
+                  <DescDiv>
+                    <Typography variant="h6" component="h1" style={roleTypo}>{item.role}</Typography>
+                    <Typography style={compnayTypo}>{item.company}</Typography>
+                  </DescDiv>
+                  <LogoDiv>
+                    <Logo src={item.img}/>
+                  </LogoDiv>
+                </Wrapper>
                 {item.desc.points.map((point, index) => (
                   <Typography key={index} style={descTypo}>{point}</Typography>
                 ))}

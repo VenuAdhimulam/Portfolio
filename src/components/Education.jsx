@@ -103,7 +103,7 @@ const LogoDiv = styled.div`
 `;
 
 const Logo = styled.img`
-  width: 130px;
+  width: ${(props) => props.size};
 `;
 
 
@@ -125,7 +125,7 @@ const Education = () => {
                     <Desc>{item.tenure}</Desc>
                   </DescDiv>
                   <LogoDiv>
-                    <Logo src={item.logo} />
+                    <Logo src={item.logo} size={item.logoSize}/>
                   </LogoDiv>
                 </BoxDiv>
               ))}

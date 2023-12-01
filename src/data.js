@@ -6,6 +6,9 @@ import Udemy_Logo from "./images/Udemy_Logo.png";
 import Mize_Logo from "./images/Mize_Logo.jpg";
 import CSU_Logo from "./images/CSU_Logo.jpeg";
 import VJIT_Logo from "./images/VJIT_Logo.png";
+import Drughelp_Logo from "./images/Drughelp_Logo.png";
+import Accenture_Logo from "./images/Accenture_Logo.png";
+import Ajna_Logo from "./images/Ajna_Logo.jpg";
 
 export const sliderItems = [
   {
@@ -25,6 +28,7 @@ export const eduObj = [
     university: "Cleveland State Univeristy",
     tenure: "2022 - 2023",
     logo: CSU_Logo,
+    logoSize: "170px"
   },
   {
     id: 2,
@@ -32,7 +36,8 @@ export const eduObj = [
     stream: "Computer Science & Engineering",
     university: "Vidya Jyothi Institute of Technology",
     tenure: "2014 - 2018",
-    logo: VJIT_Logo
+    logo: VJIT_Logo,
+    logoSize: "135px"
   },
   // {
   //   id: 3,
@@ -77,18 +82,17 @@ export const categories = [
 export const experiences = [
   {
     id: "1",
-    role: "Full Stack Engineer",
+    role: "Software Engineer",
     company: "Drughelp.care ",
     date: "Jul 2022 – May 2023",
-    img: Python_Logo,
+    img: Drughelp_Logo,
     desc: {
       points: [ 
-        "• At Cleveland State University, I worked as a Full Stack Engineer on Drughelp.Care, a research project and free website designed to assist individuals affected by the opioid crisis.",
-        "• Designed, developed, and deployed a chatbot feature on website to aid and support to visitors.",
-        "• Enhanced website performance by +40% through the integration of Google Analytics to track website trafic and user behavior.",
+        "• At Cleveland State University, I worked as a Software Engineer on Drughelp.Care, a research project and free website designed to assist individuals affected by the opioid crisis.",
+        "• Designed, developed, and deployed a chatbot feature on the website to provide aid and support to visitors.",
+        "• Enhanced website performance by +40% through the integration of Google Analytics to track website traffic and user behavior."
       ],
     },
-    link: "https://www.hackerrank.com/certificates/d81ddbaeb8f1",
   },
   // {
   //   id: "2",
@@ -97,21 +101,20 @@ export const experiences = [
   //   date: "Feb 2022 – June 2022",
   //   img: Python_Logo,
   //   desc: "",
-  //   link: "https://www.hackerrank.com/certificates/d81ddbaeb8f1",
+  //
   // },
   {
     id: "3",
     role: "Application Development Analyst",
     company: "Accenture",
     date: "Aug 2021 – Dec 2021",
-    img: Python_Logo,
+    img: Accenture_Logo,
     desc: {
       points: [
         "• My role & responsibilities at Accenture included creating, testing, and implementing software applications that fulfilled JPMC's (Client) specific business needs.",
-        "• During my tenure, I collaborated with JPMC stakeholders to understand their needs and developed software solutions using JAVA 8, SPRING BOOT, REACT etc.",
+        "• During my tenure, I collaborated with JPMC stakeholders to understand their needs and developed software solutions using Java 8, Springboot, React etc.",
       ],
     },
-    link: "https://www.hackerrank.com/certificates/d81ddbaeb8f1",
   },
   {
     id: "4",
@@ -121,26 +124,24 @@ export const experiences = [
     img: Mize_Logo,
     desc: {
       points: [
-        "• Worked as a key software engineer and provided expertise in SPRINGBOOT, JAVA, HIBERNATE, JAVASCRIPT, REACT and YUI.",
-        "• Assisted Takeuchi (USA & JAPAN), Bluestar and Kohler client projects with the integration of the WARRANTY, REGISTRATION, PRODUCTS, and PLANS smartblox from the Customer Central project into their respective projects.",
-        "• Achieved 30% increase in code quality by optimizing code, addressing critical security issues, and clean code practices.",
+        "• Key software engineer specializing in Springboot, Java, Hibernate, JavaScript, and React.",
+        "• Integrated WARRANTY, REGISTRATION, PRODUCTS, and PLANS smartblox from Customer Central into Takeuchi (USA & JAPAN), Bluestar, and Kohler client projects.",
+        "• Improved code quality by 30% through optimization, addressing security issues, and implementing clean code practices.",
       ],
     },
-    link: "https://www.hackerrank.com/certificates/d81ddbaeb8f1",
   },
   {
     id: "5",
     role: "Intern",
     company: "Ajna Networks",
     date: "May 2018 – Oct 2018",
-    img: Python_Logo,
+    img: Ajna_Logo,
     desc: {
       points: [
-          "• At Ajna Networks, my primary responsibilities revolved around utilizing front-end technologies to develop dynamic webpages for clients.",
-          "• Through my internship, I gained valuable hands-on experience in front-end development and acquired proficiency in creating effective web pages using diverse tools and technologies.",
+          "• At Ajna Networks, focused on using front-end technologies to create dynamic webpages for clients.",
+          "• Internship provided hands-on experience and proficiency in front-end development, mastering diverse tools and technologies for effective webpage creation.",
         ],
       },
-    link: "https://www.hackerrank.com/certificates/d81ddbaeb8f1",
   },
 ];
 

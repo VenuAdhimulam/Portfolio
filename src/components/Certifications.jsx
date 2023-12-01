@@ -7,11 +7,8 @@ import { certifications } from "../data";
 const Container = styled.div`
   display: flex;
   align-items: center;
-  flex-direction: row;
-  margin: 50px;
-  padding: 50px;
-  background: #FFF;
-  // background: linear-gradient(180deg, #fff, #fff, #c1eec6);
+  // background: #c1eec6;
+  background: linear-gradient(180deg, #FFF, #c1eec6);
   ${mobile({ padding: "10px" })}
 `;
 
@@ -38,17 +35,28 @@ const CardsContainer = styled.div`
   justify-content: space-between;
 `;
 
+const Wrapper = styled.div`
+  margin: 50px;
+  padding: 50px;
+  display: flex;
+  align-items: center;
+  justify-content:center;
+  flex-direction: row;
+`;
+
 const Certifications = () => {
   return (
     <Container>
-      <TitleDiv>
-        <Title>Certificates</Title>
-      </TitleDiv>
-      <CardsContainer>
-        {certifications.map((item) => (
-          <Certificate item={item} key={item.id} />
-        ))}
-      </CardsContainer>
+      <Wrapper>
+        <TitleDiv>
+          <Title>Certificates</Title>
+        </TitleDiv>
+        <CardsContainer>
+          {certifications.map((item) => (
+            <Certificate item={item} key={item.id} />
+          ))}
+        </CardsContainer>
+      </Wrapper>
     </Container>
   );
 };

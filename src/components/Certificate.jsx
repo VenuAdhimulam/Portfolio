@@ -31,7 +31,7 @@ const Container = styled.div`
   background-color: #f6fcf6;
   position: relative;
   border-radius: 15px;
-  box-shadow: 0.5px 0.5px 0.5px rgba(0, 0, 0, 0.4);
+  box-shadow: 0.9px 0.9px 0.9px rgba(0.7, 0.7, 0.7, 0.7);
 
   &:hover ${Info} {
     opacity: 1;
@@ -71,13 +71,13 @@ const Icon = styled.div`
 const Certificate = ({ item }) => {
   return (
     <Container onClick={() => window.location = item.link}>
-        <Circle />
-        <Image src={item.img} />
-        <Info>
-          <Icon>
-            <SearchOutlined/>
-          </Icon>
-        </Info>
+      <Circle />
+      <Image src={item.img} />
+      <Info>
+        <Icon>
+          <SearchOutlined/>
+        </Icon>
+      </Info>
     </Container>
   );
 };

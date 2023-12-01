@@ -2,8 +2,8 @@ import React from "react";
 import styled from "styled-components";
 import { sliderItems } from "../data";
 import { mobile } from "../responsive";
-import { Gradient } from "@material-ui/icons";
 import mainLogo from "../images/main_Logo.svg";
+import Resume from "../pdfs/VenuAdimulam.pdf";
 
 const Container = styled.div`
   width: 100%;
@@ -74,6 +74,30 @@ const Desc = styled.p`
   letter-spacing: 3px;
 `;
 
+const Button = styled.a`
+  border: 4px solid #c1eec6;
+  background-color: #c1eec6;
+  cursor: pointer;
+  font-weight: 500;
+  font-size: 1em;
+  text-decoration: none;
+  color: #000;
+  display: flex;
+  width: 140px;
+  height: 40px;
+  border-radius: 10px;
+  align-content: center;
+  align-items: center;
+  justify-content: center;
+  justify-items: center;
+  margin-top: 20px;
+
+  &:hover {
+    background-color: white;
+    transition: all 1s ease;
+  }
+`;
+
 const Slider = () => {  
   return (
     <Container>
@@ -88,6 +112,7 @@ const Slider = () => {
                 <Greeting>{item.greeting}</Greeting>
                 <Title>Venu<span style={{color: "#add6b2"}}> Adimulam</span></Title>
                 <Desc>{item.desc}</Desc>
+                <Button href={Resume} target="_blank">View Resume</Button>
               </InfoContainer>
             </Slide>
             <ColorBlend/>

@@ -76,11 +76,14 @@ const Right = styled.div`
   flex: 1;
   padding: 20px;
   background-color: #191919;
+  display:flex;
+  flex-direction: column;
+  align-content: flex-end;
   ${mobile({ backgroundColor: "#393939" })};
 `;
 
 const ContactItem = styled.div`
-  margin-bottom: 20px;
+  margin-bottom: 5px;
   display: flex;
   align-items: center;
 `;
@@ -93,11 +96,11 @@ const Footer = () => {
   return (
     <Container>
       <Left>
-        <Logo>LAMA</Logo>
+        {/* <Logo>Reach out</Logo> */}
         <Desc>
-          Lorem Ipsum is simply dummy text of the printing and typesetting
+          {/* Lorem Ipsum is simply dummy text of the printing and typesetting
           industry. Lorem Ipsum has been the industry's standard dummy text ever
-          since the 1500s.
+          since the 1500s. */}
         </Desc>
         <SocialContainer>
           <SocialIcon color="3B5999">
@@ -115,7 +118,7 @@ const Footer = () => {
         </SocialContainer>
       </Left>
       <Center>
-        <Title>Usefuls Links</Title>
+        {/* <Title>Usefuls Links</Title>
         <List>
           <ListItem>Home</ListItem>
           <ListItem>Cart</ListItem>
@@ -127,19 +130,19 @@ const Footer = () => {
           <ListItem>Wish List</ListItem>
           <ListItem>Wish List</ListItem>
           <ListItem>Terms</ListItem>
-        </List>
+        </List> */}
       </Center>
       <Right>
-        <Title>Contact</Title>
+        {/* <Title>Contact</Title> */}
         <ContactItem>
-          <Room style={{ marginRight: "10px" }} /> 2121 Euclid Ave, Cleveland,
-          OH 44115
+          {/* <Room style={{ marginRight: "10px" }} /> 2121 Euclid Ave, Cleveland, */}
+          {/* OH 44115 */}
         </ContactItem>
         <ContactItem>
           <Phone style={{ marginRight: "10px" }} /> +1 234 226 7467
         </ContactItem>
         <ContactItem>
-          <Mail style={{ marginRight: "10px" }} /> contact@Lama.com
+          <Mail style={{ marginRight: "10px" }} /> contact@gmail.com
         </ContactItem>
       </Right>
     </Container>
