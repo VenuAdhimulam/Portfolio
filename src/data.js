@@ -10,6 +10,30 @@ import Drughelp_Logo from "./images/Drughelp_Logo.png";
 import Accenture_Logo from "./images/Accenture_Logo.png";
 import Ajna_Logo from "./images/Ajna_Logo.jpg";
 
+import AWS from "./images/svg/AWS.svg";
+import BitBucket from "./images/svg/BitBucket.svg";
+import Bootstarp from "./images/svg/Bootstarp.svg";
+import CSS from "./images/svg/CSS.svg";
+import Docker from "./images/svg/Docker.svg";
+import ExpressJS from "./images/svg/ExpressJS.svg";
+import Firebase from "./images/svg/Firebase.svg";
+import Git from "./images/svg/Git.svg";
+import GoogleAnalytics from "./images/svg/Google_Analytics.svg";
+import HTML from "./images/svg/HTML.svg";
+import Java from "./images/svg/Java.svg";
+import JavaScript from "./images/svg/JavaScript.svg";
+import Jenkins from "./images/svg/Jenkins.svg";
+import MySQL from "./images/svg/MySQL.svg";
+import NodeJS from "./images/svg/NodeJS.svg";
+import React from "./images/svg/React.svg";
+import Redux from "./images/svg/Redux.svg";
+import Springboot from "./images/svg/Springboot.svg";
+import Stripe from "./images/svg/Stripe.svg";
+import Tableau from "./images/svg/Tableau.svg";
+import VSCode from "./images/svg/VS_Code.svg";
+import IntellijIDE from "./images/svg/IntellijIdea.svg";
+import Jira from "./images/svg/Jira.svg";
+
 export const sliderItems = [
   {
     id: 1,
@@ -28,7 +52,7 @@ export const eduObj = [
     university: "Cleveland State Univeristy",
     tenure: "2022 - 2023",
     logo: CSU_Logo,
-    logoSize: "170px"
+    logoSize: "170px",
   },
   {
     id: 2,
@@ -93,6 +117,9 @@ export const experiences = [
         "• Enhanced website performance by +40% through the integration of Google Analytics to track website traffic and user behavior."
       ],
     },
+    techStack: {
+      logos : [ React, Redux, JavaScript, AWS, Git, Jira, GoogleAnalytics, MySQL, VSCode ],
+    },
   },
   // {
   //   id: "2",
@@ -115,6 +142,9 @@ export const experiences = [
         "• During my tenure, I collaborated with JPMC stakeholders to understand their needs and developed software solutions using Java 8, Springboot, React etc.",
       ],
     },
+    techStack: {
+      logos : [ Java, Springboot, React, JavaScript, BitBucket, Docker, Jira, IntellijIDE],
+    },
   },
   {
     id: "4",
@@ -129,6 +159,9 @@ export const experiences = [
         "• Improved code quality by 30% through optimization, addressing security issues, and implementing clean code practices.",
       ],
     },
+    techStack: {
+      logos : [ Java, Springboot, React, Redux, JavaScript, AWS, Git, Jira, Jenkins, MySQL, IntellijIDE ],
+    },
   },
   {
     id: "5",
@@ -138,10 +171,13 @@ export const experiences = [
     img: Ajna_Logo,
     desc: {
       points: [
-          "• At Ajna Networks, focused on using front-end technologies to create dynamic webpages for clients.",
-          "• Internship provided hands-on experience and proficiency in front-end development, mastering diverse tools and technologies for effective webpage creation.",
-        ],
-      },
+        "• At Ajna Networks, focused on using front-end technologies to create dynamic webpages for clients.",
+        "• Internship provided hands-on experience and proficiency in front-end development, mastering diverse tools and technologies for effective webpage creation.",
+      ],
+    },
+    techStack: {
+      logos : [ HTML, CSS, Bootstarp, React, JavaScript, Git, MySQL, VSCode ],
+    },
   },
 ];
 

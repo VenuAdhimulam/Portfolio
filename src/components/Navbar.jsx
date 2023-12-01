@@ -4,6 +4,7 @@ import { Search, ShoppingCartOutlined } from "@material-ui/icons";
 import React from "react";
 import styled from "styled-components";
 import { mobile } from "../responsive";
+import git from "../images/svg/git-branch.svg";
 
 const Container = styled.div`
   height: 60px;
@@ -80,6 +81,10 @@ const MenuItems = styled.div`
   ${mobile({ fontSize: "12px", marginLeft: "10px" })}
 `;
 
+const Img = styled.img`
+  width: 30px;
+`;
+
 // const span = styled.span`
 //   color: teal;
 // `;
@@ -89,6 +94,7 @@ const Navbar = () => {
     <Container>
       <Wrapper>
         <Left>
+          <Img src={git}/>
           <Logo>
             <strong>Port<span style={{color: "#add6b2"}}>Folio</span></strong>
           </Logo>

@@ -69,6 +69,23 @@ const Logo = styled.img`
   width: 120px;
 `;
 
+const TechStackWrapper = styled.div`
+  flex: 1;
+  height: 100%;
+  width: 100%;
+  display: flex;
+  margin-top: 40px;
+  flex-wrap: wrap;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;  
+  justify-content: space-between;
+`;
+
+const TechStack = styled.img`
+  width: 40px;
+`;
+
 function Experience() {
   const classes = useStyles();
 
@@ -90,7 +107,7 @@ function Experience() {
 
   const descTypo = {
     textAlign: "justify",
-    marginBottom: "10px",
+    marginBottom: "20px",
     fontWeight: 500,
     letterSpacing: "3px",
     fontSize: "1em",
@@ -141,6 +158,13 @@ function Experience() {
                 {item.desc.points.map((point, index) => (
                   <Typography key={index} style={descTypo}>{point}</Typography>
                 ))}
+                {/* <TechStackContainer> */}
+                <TechStackWrapper>
+                  {item.techStack.logos.map((logo, index) => (
+                    <TechStack key={index} src={logo}/>
+                  ))}
+                </TechStackWrapper>
+                {/* </TechStackContainer> */}
               </Paper>
             </TimelineContent>
           </TimelineItem>

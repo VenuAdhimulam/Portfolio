@@ -2,7 +2,7 @@ import styled from "styled-components";
 import React from "react";
 import { aboutData } from "../data";
 import { mobile } from "../responsive";
-import Blob from "../images/blob.svg"
+import Headshot from "../images/HeadShot.png";
 
 const Container = styled.div`
   position: relative;
@@ -11,35 +11,28 @@ const Container = styled.div`
   align-items: center;
   min-height: 100px;
   width: 100%;
-  background: #c1eec6;
-  // background: linear-gradient(180deg, #c1eec6, #c1eec6); 
+  background: linear-gradient(180deg, #c1eec6, #c1eec6);
+  overflow: hidden;
   ${mobile({ display: "none" })};
 `;
 
 const ImgContainer = styled.div`
-  flex: 1;
+  flex: 0.8;
   width: 400px;
   height: 400px;
-  margin: 10px;
-  background-size: cover;
-  padding: 30px;
-  background: url(${props => props.imageUrl}) center/cover; 
-  background-position: center;
-  display: flex;
-  align-items: center;
-  justify-content: center;
+  position: relative;
+  overflow: hidden;
 `;
 
 const Image = styled.img`
-  height: 300px;
-  width: 300px;
-  border-radius: 30%;
-  z-index: 2;
-  padding: 20px;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  border-radius: 50%;
 `;
 
 const InfoContainer = styled.div`
-  flex: 1;
+  flex: 1.2;
 `;
 
 const Wrapper = styled.div`
@@ -47,7 +40,7 @@ const Wrapper = styled.div`
   display: flex;
   transition: all 1.5s ease;
   padding: 20px 100px;
-  transform: translateX(${(props) => props.slideIndex * -100}vw);
+  margin: 0px 50px;
 `;
 
 const Slide = styled.div`
@@ -55,7 +48,6 @@ const Slide = styled.div`
   align-items: center;
   justify-content: center;
   border-radius: 30px;
-  padding: 30px 60px;
   background: #fff;
   box-shadow: 0.5px 0.5px 0.5px rgba(0, 0, 0, 0.4);
 `;
@@ -65,6 +57,7 @@ const SlideBody = styled.div`
   align-items: center;
   border-radius: 30px;
   padding: 20px 60px;
+  overflow: hidden;
 `;
 
 const Title = styled.h1`
@@ -73,33 +66,35 @@ const Title = styled.h1`
 `;
 
 const Desc = styled.p`
-  margin: 5xpx 0px;
+  margin: 5px 0px;
   font-size: 1.5em;
-  font-weight: 400;
+  font-weight: 300;
   letter-spacing: 3px;
   text-align: justify;
+  border-left: 2px solid #6d9e8f;
+  padding-left: 20px;
 `;
 
 const About = () => {
-    return (
-        <Container>
-            <Wrapper>
-                {aboutData.map((item) => (
-                    <Slide bg={item.bg} key={item.id}>
-                      <SlideBody>
-                        <ImgContainer imageUrl={Blob}>
-                            <Image src={item.img} />
-                        </ImgContainer>
-                        <InfoContainer>
-                            <Title>{item.title}</Title>
-                            <Desc>{item.desc}</Desc>
-                        </InfoContainer>
-                      </SlideBody>
-                    </Slide>
-                ))}
-            </Wrapper>
-        </Container>
-    );
+  return (
+    <Container>
+      <Wrapper>
+        {aboutData.map((item) => (
+          <Slide bg={item.bg} key={item.id}>
+            <SlideBody>
+              <ImgContainer>
+                <Image src={Headshot} alt="Headshot" />
+              </ImgContainer>
+              <InfoContainer>
+                <Title>About<span style={{ color: "#add6b2" }}> Me</span></Title>
+                <Desc>{item.desc}</Desc>
+              </InfoContainer>
+            </SlideBody>
+          </Slide>
+        ))}
+      </Wrapper>
+    </Container>
+  );
 };
 
 export default About;
