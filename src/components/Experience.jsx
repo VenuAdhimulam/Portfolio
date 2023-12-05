@@ -31,7 +31,8 @@ const Container = styled.div`
 
 const Title = styled.h1`
   font-size: 50px;
-  margin-bottom: 20px;
+  margin-bottom: 30px;
+  margin-top: 60px;
   ${mobile({ fontSize: "40px" })}
 `;
 
@@ -129,7 +130,7 @@ function Experience() {
   };
 
   return (
-    <Container>
+  <Container id="experience">
     <Title>Experience</Title>
     <CardsContainer>
       <Timeline align="alternate" >

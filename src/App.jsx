@@ -1,13 +1,25 @@
-import Cart from "./pages/Cart";
 import Home from "./pages/Home";
-import Login from "./pages/Login";
-import Product from "./pages/Product";
-import ProductList from "./pages/ProductList";
-import Register from "./pages/Register";
+import Slider from "./components/Slider";
+import About from "./components/About";
+import Certifications from "./components/Certifications";
+import Experience from "./components/Experience";
+import Education from "./components/Education";
+import { Routes,  Route} from 'react-router-dom';
 
 const App = () => {
-  // return <Login />;
-  return <Home />;
+  return (
+    <>
+      <Home />
+      <Routes>
+        <Route  path="/home" element={ <Slider/>} />
+        <Route  path="/about" element={<About/>} />
+        <Route  path="/experience" element={<Experience/>} />
+        <Route  path="/education" element={<Education/>} />
+        <Route  path="/certication" element={<Certifications/>} />
+        {/* <Route path="/contact" component={<About/>} /> */}
+      </Routes>
+    </>
+  );
 };
 
 export default App;

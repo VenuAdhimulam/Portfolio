@@ -46,7 +46,7 @@ const Wrapper = styled.div`
 
 const Certifications = () => {
   return (
-    <Container>
+    <Container id="certificates">
       <Wrapper>
         <TitleDiv>
           <Title>Certificates</Title>

@@ -77,7 +77,7 @@ const Desc = styled.p`
 
 const About = () => {
   return (
-    <Container>
+    <Container id="about">
       <Wrapper>
         {aboutData.map((item) => (
           <Slide bg={item.bg} key={item.id}>

@@ -14,17 +14,17 @@ import Education from "../components/Education";
 const Home = () => {
   return (
     <div>
-      <Announcement />
-      <Navbar />
-      <Slider />
-      <WaverTop/>
-      <About/>
-      <WaverBottom/>
-      <Experience/>
-      <Education/>
-      <Certifications/>
-      <Newsletter />
-      <Footer />
+        {/* <Announcement /> */}
+        <Navbar />
+        <Slider />
+        <WaverTop/>
+        <About/>
+        <WaverBottom/>
+        <Experience/>
+        <Education/>
+        <Certifications/>
+        <Newsletter />
+        <Footer />
     </div>
   );
 };

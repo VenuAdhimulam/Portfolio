@@ -109,7 +109,7 @@ const Logo = styled.img`
 
 const Education = () => {  
   return (
-    <Container>
+    <Container id="education">
         <Slide>
           <InfoContainer>
             <TitleDiv>

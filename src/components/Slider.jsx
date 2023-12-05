@@ -100,7 +100,7 @@ const Button = styled.a`
 
 const Slider = () => {  
   return (
-    <Container>
+    <Container id="home">
       <Wrapper>
         {sliderItems.map((item) => (
           <>
