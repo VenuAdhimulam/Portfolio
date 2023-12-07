@@ -22,8 +22,9 @@ const Home = () => {
         <WaverBottom/>
         <Experience/>
         <Education/>
+        <WaverTop/>
         <Certifications/>
-        <Newsletter />
+        {/* <Newsletter /> */}
         <Footer />
     </div>
   );

@@ -1,9 +1,11 @@
-import React from "react";
+import {React, useEffect} from "react";
 import styled from "styled-components";
 import { sliderItems } from "../data";
 import { mobile } from "../responsive";
 import mainLogo from "../images/main_Logo.svg";
 import Resume from "../pdfs/VenuAdimulam.pdf";
+import ReactGA from "react-ga";
+
 
 const Container = styled.div`
   width: 100%;
@@ -99,6 +101,12 @@ const Button = styled.a`
 `;
 
 const Slider = () => {  
+
+  useEffect(() => {
+    //non - interation event
+    ReactGA.pageview(window.location.pathname);
+  }, []);
+  
   return (
     <Container id="home">
       <Wrapper>

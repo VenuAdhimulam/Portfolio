@@ -7,8 +7,8 @@ import { certifications } from "../data";
 const Container = styled.div`
   display: flex;
   align-items: center;
-  // background: #c1eec6;
-  background: linear-gradient(180deg, #FFF, #c1eec6);
+  background: #c1eec6;
+  // background: linear-gradient(180deg, #FFF, #c1eec6);
   ${mobile({ padding: "10px" })}
 `;
 
@@ -36,8 +36,8 @@ const CardsContainer = styled.div`
 `;
 
 const Wrapper = styled.div`
-  margin: 50px;
-  padding: 50px;
+  margin: 0px 50px;
+  padding: 0px 50px;
   display: flex;
   align-items: center;
   justify-content:center;

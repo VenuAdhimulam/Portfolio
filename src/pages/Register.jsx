@@ -65,10 +65,10 @@ const Register = () => {
           <Input placeholder="email" />
           <Input placeholder="Password" />
           <Input placeholder="confirm Password" />
-          <Agreement>
+          {/* <Agreement>
             By creating an account, I concent to the processing of my personal
             data in accordance with the <b>PRIVACY POLICY</b>
-          </Agreement>
+          </Agreement> */}
           <Button>Create</Button>
         </Form>
       </Wrapper>

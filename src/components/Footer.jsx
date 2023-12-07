@@ -1,31 +1,48 @@
 import {
+  Copyright,
   Facebook,
   Instagram,
   Mail,
   Phone,
   Pinterest,
+  LinkedIn,
+  GitHub,
   Room,
   Twitter,
 } from "@material-ui/icons";
 import React from "react";
 import styled from "styled-components";
 import { mobile } from "../responsive";
+import Hackerrank from "../images/Hackerrank_Logo.png";
+import LeetCode from "../images/LeetCode_Logo.jpg";
+import { useNavigate } from 'react-router-dom';
 
 const Container = styled.div`
+  padding: 0px 100px;
   display: flex;
+  flex-direction: column;
   color: white;
+  background-color: #263238;
   ${mobile({ flexDirection: "column" })}
 `;
 
 const Left = styled.div`
   flex: 1;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
   padding: 15px;
   letter-spacing: 2px;
-  background-color: #191919;
 `;
 
 const Logo = styled.h1`
+  // flex: 1;
+`;
+
+const LogoDiv = styled.div`
   flex: 1;
+  display: flex;
+  align-items: center;
 `;
 
 const Desc = styled.p`
@@ -45,7 +62,15 @@ const SocialIcon = styled.div`
   display: flex;
   align-items: center;
   justify-content: center;
-  margin-right: 20px;
+  margin-left: 20px;
+`;
+
+const AnimatedSocialIcon = styled(SocialIcon)`
+  transition: all 0.3s ease;
+
+  &:hover {
+    transform: scale(1.2);
+  }
 `;
 
 const Center = styled.div`
@@ -56,7 +81,7 @@ const Center = styled.div`
 `;
 
 const Title = styled.h3`
-  margin-bottom: 30px;
+  margin: 15px 0px;
 `;
 
 const List = styled.ul`
@@ -73,9 +98,8 @@ const ListItem = styled.li`
 `;
 
 const Right = styled.div`
-  flex: 1;
+  flex: 0.2;
   padding: 20px;
-  background-color: #191919;
   display:flex;
   flex-direction: column;
   align-content: flex-end;
@@ -92,60 +116,102 @@ const Payment = styled.img`
   width: 50%;
 `;
 
+const Contents = styled.div`
+  display: flex;
+  flex-direction: row;
+`;
+
+const CopyRightDiv = styled.div`
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+`;
+
+const Image = styled.img`
+  height: 100%;
+  z-index: 2;
+  border-radius: 50%;
+`;
+
 const Footer = () => {
+  const history = useNavigate();
+
+  const handleClick = (platform) => {
+    const paths = {
+      LinkedIn: 'https://www.linkedin.com/in/adimulamvenugopal/',
+      GitHub: '/github',
+      Hackerrank: '/hackerrank',
+      LeetCode: '/leetcode',
+    };
+
+    history(paths[platform]);
+
+  };
+  
   return (
-    <Container>
-      <Left>
-        {/* <Logo>Reach out</Logo> */}
-        <Desc>
-          {/* Lorem Ipsum is simply dummy text of the printing and typesetting
-          industry. Lorem Ipsum has been the industry's standard dummy text ever
-          since the 1500s. */}
-        </Desc>
-        <SocialContainer>
-          <SocialIcon color="3B5999">
-            <Facebook />
-          </SocialIcon>
-          <SocialIcon color="E4405F">
-            <Instagram />
-          </SocialIcon>
-          <SocialIcon color="55ACEE">
-            <Twitter />
-          </SocialIcon>
-          <SocialIcon color="E60023">
-            <Pinterest />
-          </SocialIcon>
-        </SocialContainer>
-      </Left>
-      <Center>
-        {/* <Title>Usefuls Links</Title>
-        <List>
-          <ListItem>Home</ListItem>
-          <ListItem>Cart</ListItem>
-          <ListItem>Men's Fashion</ListItem>
-          <ListItem>Woman Fashion</ListItem>
-          <ListItem>Accesories</ListItem>
-          <ListItem>My Account</ListItem>
-          <ListItem>Ordr Tracking</ListItem>
-          <ListItem>Wish List</ListItem>
-          <ListItem>Wish List</ListItem>
-          <ListItem>Terms</ListItem>
-        </List> */}
-      </Center>
-      <Right>
-        {/* <Title>Contact</Title> */}
-        <ContactItem>
-          {/* <Room style={{ marginRight: "10px" }} /> 2121 Euclid Ave, Cleveland, */}
-          {/* OH 44115 */}
-        </ContactItem>
-        <ContactItem>
-          <Phone style={{ marginRight: "10px" }} /> +1 234 226 7467
-        </ContactItem>
-        <ContactItem>
-          <Mail style={{ marginRight: "10px" }} /> contact@gmail.com
-        </ContactItem>
-      </Right>
-    </Container>
+    <>
+      <Container>
+        <Contents>
+          <Left>
+            <LogoDiv>
+              <Logo>Venu Adimulam</Logo>
+            </LogoDiv>
+            {/* <Desc>
+              Lorem Ipsum is simply dummy text of the printing and typesetting
+              industry. Lorem Ipsum has been the industry's standard dummy text ever
+              since the 1500s.
+            </Desc> */}
+            <SocialContainer>
+              <AnimatedSocialIcon color="0a66c2" onClick={handleClick("LinkedIn")}>
+                <LinkedIn />
+              </AnimatedSocialIcon>
+              <AnimatedSocialIcon color="010409" onClick={handleClick("GitHub")}>
+                <GitHub />
+              </AnimatedSocialIcon>   
+              {/* <AnimatedSocialIcon color="E60023">
+                <Pinterest />
+              </AnimatedSocialIcon> */}
+              <AnimatedSocialIcon color="263238" onClick={handleClick("Hackerrank")}>
+                <Image src={Hackerrank} /> 
+              </AnimatedSocialIcon>
+              <AnimatedSocialIcon color="263238" onClick={handleClick("LeetCode")}>
+                <Image src={LeetCode} /> 
+              </AnimatedSocialIcon>
+            </SocialContainer>
+          </Left>
+          {/* <Center>
+            <Title>Usefuls Links</Title>
+            <List>
+              <ListItem>Home</ListItem>
+              <ListItem>Cart</ListItem>
+              <ListItem>Men's Fashion</ListItem>
+              <ListItem>Woman Fashion</ListItem>
+              <ListItem>Accesories</ListItem>
+              <ListItem>My Account</ListItem>
+              <ListItem>Ordr Tracking</ListItem>
+              <ListItem>Wish List</ListItem>
+              <ListItem>Wish List</ListItem>
+              <ListItem>Terms</ListItem>
+            </List>
+          </Center> */}
+          <Right>
+            <Title>Contact</Title>
+            <ContactItem>
+              <Phone style={{ marginRight: "10px" }} /> +1 216 467 0834
+            </ContactItem>
+            <ContactItem>
+              <Mail style={{ marginRight: "10px" }} /> venuadimulam01@gmail.com
+            </ContactItem>
+          </Right>
+        </Contents>
+        <hr/>
+        <CopyRightDiv>
+          <Desc>© Venu Adimulam 2023. All rights reserved.</Desc>  
+        </CopyRightDiv>
+      </Container>
+     
+    </>
   );
 };
 

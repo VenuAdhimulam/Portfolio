@@ -22,8 +22,8 @@ const Container = styled.div`
 
 const Wrapper = styled.div`
   position: sticky;
-  padding-left: 140px; 
-  padding-right: 140px; 
+  padding-left: 100px; 
+  padding-right: 100px; 
   display: flex;
   width: 100%;
   justify-content: space-between;
@@ -113,7 +113,7 @@ const Navbar = () => {
           <ScrollLink smooth={true} duration={2000} to="experience" style={MenuItems}>Experience</ScrollLink>
           <ScrollLink smooth={true} duration={2000} to="education" style={MenuItems}>Education</ScrollLink>
           <ScrollLink smooth={true} duration={2000} to="certificates" style={MenuItems}>Certificates</ScrollLink>
-          <ScrollLink smooth={true} duration={2000} to="contact" style={MenuItems}>Contact</ScrollLink>
+          {/* <ScrollLink smooth={true} duration={2000} to="contact" style={MenuItems}>Contact</ScrollLink> */}
         </Right>
       </Wrapper>
     </Container>
