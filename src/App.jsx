@@ -21,6 +21,7 @@ const App = () => {
         <Route  path="/education" element={<Education/>} />
         <Route  path="/certication" element={<Certifications/>} />
         {/* <Route path="/contact" component={<About/>} /> */}
+        {/* Test */}
       </Routes>
     </>
   );
