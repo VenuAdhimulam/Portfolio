@@ -1,3 +1,4 @@
+import { useEffect } from "react";
 import Home from "./pages/Home";
 import Slider from "./components/Slider";
 import About from "./components/About";
