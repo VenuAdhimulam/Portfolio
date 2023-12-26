@@ -8,8 +8,9 @@ import Education from "./components/Education";
 import { Routes,  Route} from 'react-router-dom';
 import ReactGA from "react-ga";
 
-const TRACKING_ID = "G-VHR359L5D4";
-ReactGA.initialize(TRACKING_ID);
+// const TRACKING_ID = "G-VHR359L5D4";
+
+ReactGA.initialize("G-JBHCC9MKGW");
 
 const App = () => {
 
