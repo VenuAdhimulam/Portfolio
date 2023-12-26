@@ -11,6 +11,11 @@ const TRACKING_ID = "G-VHR359L5D4";
 ReactGA.initialize(TRACKING_ID);
 
 const App = () => {
+
+  useEffect(() => {
+    //non - interation event
+    ReactGA.pageview(window.location.pathname);
+  }, []);
   return (
     <>
       <Home />
