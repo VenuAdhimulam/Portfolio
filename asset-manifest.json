@@ -1,13 +1,13 @@
 {
   "files": {
-    "main.js": "/Portfolio/static/js/main.7fc0b0aa.chunk.js",
-    "main.js.map": "/Portfolio/static/js/main.7fc0b0aa.chunk.js.map",
+    "main.js": "/Portfolio/static/js/main.ef13519c.chunk.js",
+    "main.js.map": "/Portfolio/static/js/main.ef13519c.chunk.js.map",
     "runtime-main.js": "/Portfolio/static/js/runtime-main.163f731f.js",
     "runtime-main.js.map": "/Portfolio/static/js/runtime-main.163f731f.js.map",
-    "static/js/2.4f8b0a69.chunk.js": "/Portfolio/static/js/2.4f8b0a69.chunk.js",
-    "static/js/2.4f8b0a69.chunk.js.map": "/Portfolio/static/js/2.4f8b0a69.chunk.js.map",
+    "static/js/2.d4042700.chunk.js": "/Portfolio/static/js/2.d4042700.chunk.js",
+    "static/js/2.d4042700.chunk.js.map": "/Portfolio/static/js/2.d4042700.chunk.js.map",
     "index.html": "/Portfolio/index.html",
-    "static/js/2.4f8b0a69.chunk.js.LICENSE.txt": "/Portfolio/static/js/2.4f8b0a69.chunk.js.LICENSE.txt",
+    "static/js/2.d4042700.chunk.js.LICENSE.txt": "/Portfolio/static/js/2.d4042700.chunk.js.LICENSE.txt",
     "static/media/AWS.e67fd2c1.svg": "/Portfolio/static/media/AWS.e67fd2c1.svg",
     "static/media/AWS_Cloud_Computing.452652bb.png": "/Portfolio/static/media/AWS_Cloud_Computing.452652bb.png",
     "static/media/Accenture_Logo.53de8e7c.png": "/Portfolio/static/media/Accenture_Logo.53de8e7c.png",
@@ -47,11 +47,11 @@
     "static/media/VenuAdimulam.244cfc74.pdf": "/Portfolio/static/media/VenuAdimulam.244cfc74.pdf",
     "static/media/education_Logo.8b5f3646.svg": "/Portfolio/static/media/education_Logo.8b5f3646.svg",
     "static/media/git-branch.1a25920a.svg": "/Portfolio/static/media/git-branch.1a25920a.svg",
-    "static/media/main_Logo.25cc0cbf.svg": "/Portfolio/static/media/main_Logo.25cc0cbf.svg"
+    "static/media/main_Logo.f73b3127.svg": "/Portfolio/static/media/main_Logo.f73b3127.svg"
   },
   "entrypoints": [
     "static/js/runtime-main.163f731f.js",
-    "static/js/2.4f8b0a69.chunk.js",
-    "static/js/main.7fc0b0aa.chunk.js"
+    "static/js/2.d4042700.chunk.js",
+    "static/js/main.ef13519c.chunk.js"
   ]
 }
