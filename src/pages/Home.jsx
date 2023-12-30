@@ -23,7 +23,7 @@ const Home = () => {
         <Experience/>
         <Education/>
         <WaverTop/>
-        <Certifications/>
+        <Certifications/> 
         {/* <Newsletter /> */}
         <Footer />
     </div>

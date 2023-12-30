@@ -1,8 +1,12 @@
 import React from "react";
 import styled from "styled-components";
 import { eduObj } from "../data";
-import { mobile } from "../responsive";
+import { mobile, mobileLandScape } from "../responsive";
 import Education_Logo from "../images/education_Logo.svg";
+import { Paper } from "@material-ui/core";
+import { useTheme } from '@material-ui/core/styles';
+import { makeStyles } from '@material-ui/core/styles';
+import useMediaQuery from '@material-ui/core/useMediaQuery';
 
 const Container = styled.div`
   width: 100%;
@@ -10,7 +14,6 @@ const Container = styled.div`
   display: flex;
   position: relative;
   overflow: hidden;
-  ${mobile({ display: "none" })};
 `;
 
 const Slide = styled.div`
@@ -22,6 +25,7 @@ const Slide = styled.div`
   mix-blend-mode: hard-light;
   padding: 50px;
   margin: 50px;
+  ${mobile({ padding: 0, margin: "10px", marginTop: "20px"})};
 `;
 
 const ImgContainer = styled.div`
@@ -30,6 +34,8 @@ const ImgContainer = styled.div`
   display: flex;
   align-items: center;
   justify-content: center;
+  ${mobile({ display: "none" })};
+  ${mobileLandScape({ display: "none" })};
 `;
 
 const Image = styled.img`
@@ -55,6 +61,13 @@ const Desc = styled.p`
   font-weight: 500;
   letter-spacing: 3px;
   font-size: 1em;
+  color: rgba(0, 0, 0, 0.66);
+
+  textAlign: justify;
+  marginBottom: 20px;
+  fontWeight: 500;
+  letterSpacing: 3px;
+  fontSize: 1em;
   color: rgba(0, 0, 0, 0.66);
 `;
 
@@ -104,10 +117,36 @@ const LogoDiv = styled.div`
 
 const Logo = styled.img`
   width: ${(props) => props.size};
+  ${mobile({ width: "100px" })};
 `;
 
+const useStyles = makeStyles((theme) => ({
+  paper: {
+    display: "flex",
+    margin: "30px 5px",
+    padding: "15px",
+    borderRadius: "8px",
+    boxShadow: "0.8px 0.8px 0.8px rgba(0, 0, 0, 0.4)",
+    borderRight: "6px solid #c1eec6",
+    borderLeft: "6px solid #c1eec6",
+    borderRight: "4px solid #c1eec6",
+    borderLeft: "4px solid #c1eec6",
+  },
+  // customTimelineItem: {
+  //   '&.MuiTimelineItem-missingOppositeContent:before': {
+  //     display: 'none', // This will disable the styling for missingOppositeContent
+  //   },
+  // },
+  // secondaryTail: {
+  //   backgroundColor: theme.palette.secondary.main,
+  // },
+}));
 
 const Education = () => {  
+  const classes = useStyles();
+  const theme = useTheme();
+  const isMobile = useMediaQuery(theme.breakpoints.down('sm'));
+
   return (
     <Container id="education">
         <Slide>
@@ -117,7 +156,7 @@ const Education = () => {
             </TitleDiv>
             <BodyDiv>
               {eduObj.map((item) => (
-                <BoxDiv>
+                <Paper variant="elevation" className={classes.paper}>
                   <DescDiv>
                     <Desc>{item.degree}</Desc>
                     <CourseTypo>{item.stream}</CourseTypo>
@@ -125,9 +164,9 @@ const Education = () => {
                     <Desc>{item.tenure}</Desc>
                   </DescDiv>
                   <LogoDiv>
-                    <Logo src={item.logo} size={item.logoSize}/>
+                    <Logo src={item.logo} size={isMobile ? "80px !important" : item.logoSize}/>
                   </LogoDiv>
-                </BoxDiv>
+                </Paper>
               ))}
             </BodyDiv>
           </InfoContainer>

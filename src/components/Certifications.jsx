@@ -17,12 +17,11 @@ const TitleDiv = styled.div`
   display: flex;
   align-items: center;
   margin-bottom: 120px;
-  // ${mobile({ fontSize: "40px" })}
+  ${mobile({ marginBottom: "40px" })}
 `;
 
 const Title = styled.h1`
   font-size: 50px;
-  margin-bottom: 20px;
   ${mobile({ fontSize: "40px" })}
 `;
 
@@ -33,6 +32,7 @@ const CardsContainer = styled.div`
   margin: 20px 65px 65px 65px;
   flex-wrap: wrap;
   justify-content: space-between;
+  ${mobile({ margin: 0, })}
 `;
 
 const Wrapper = styled.div`
@@ -42,6 +42,8 @@ const Wrapper = styled.div`
   align-items: center;
   justify-content:center;
   flex-direction: row;
+  ${mobile({ margin: 0, padding : 0, flexDirection: "column" })}
+
 `;
 
 const Certifications = () => {

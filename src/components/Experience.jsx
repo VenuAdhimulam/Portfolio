@@ -12,10 +12,17 @@ import TimelineDot from '@material-ui/lab/TimelineDot';
 import Paper from '@material-ui/core/Paper';
 import Typography from '@material-ui/core/Typography';
 import { experiences } from "../data";
+import { useTheme } from '@material-ui/core/styles';
+import useMediaQuery from '@material-ui/core/useMediaQuery';
 
 const useStyles = makeStyles((theme) => ({
   paper: {
     padding: '6px 20px',
+  },
+  customTimelineItem: {
+    '&.MuiTimelineItem-missingOppositeContent:before': {
+      display: 'none', // This will disable the styling for missingOppositeContent
+    },
   },
   secondaryTail: {
     backgroundColor: theme.palette.secondary.main,
@@ -42,12 +49,19 @@ const CardsContainer = styled.div`
   margin: 20px 65px 65px 65px;
   flex-wrap: wrap;
   justify-content: space-between;
+  ${mobile({ 
+    padding: 0,
+    margin: 0
+   })}
+
 `;
 
 const Wrapper = styled.div`
   display: flex;
   margin-bottom: 30px;
   border-bottom: 1px solid #c1eec6;
+
+  ${mobile({ alignItems: "flex-start", marginBottom: "20px" })}
 `;
 
 const DescDiv = styled.div`
@@ -85,6 +99,7 @@ const TechStackWrapper = styled.div`
 
 const TechStack = styled.img`
   width: 40px;
+  margin: 10px;
 `;
 
 function Experience() {
@@ -129,22 +144,29 @@ function Experience() {
     color: "rgba(0, 0, 0, 0.66)"
   };
 
+  const theme = useTheme();
+  const isMobile = useMediaQuery(theme.breakpoints.down('sm')); // Adjust the breakpoint as needed
+
   return (
   <Container id="experience">
     <Title>Experience</Title>
     <CardsContainer>
-      <Timeline align="alternate" >
+      <Timeline align={!isMobile ? "alternate" : "left"}>
         {experiences.map((item) => (
-          <TimelineItem key={item.id} >
-            <TimelineOppositeContent>
-              <Typography variant="body2" color="textSecondary">
-                {item.date} 
-              </Typography>
-            </TimelineOppositeContent>
+          <TimelineItem key={item.id} className={classes.customTimelineItem}>
+             {!isMobile ? (
+              <TimelineOppositeContent>
+                <Typography variant="body2" color="textSecondary">
+                  {item.date} 
+                </Typography>
+              </TimelineOppositeContent>
+            ) : null}
+            {/* {!isMobile ? ( */}
             <TimelineSeparator>
               <TimelineDot variant="outlined" style={timelineDotStyle}/>
               <TimelineConnector style={timelineConnectorStyle} />
             </TimelineSeparator>
+            {/* ) : null} */}
             <TimelineContent>
               <Paper elevation={3} className={classes.paper} style={paperDiv}>
                 <Wrapper>

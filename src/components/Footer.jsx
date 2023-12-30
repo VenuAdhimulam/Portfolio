@@ -16,6 +16,8 @@ import { mobile } from "../responsive";
 import Hackerrank from "../images/Hackerrank_Logo.png";
 import LeetCode from "../images/LeetCode_Logo.jpg";
 import { useNavigate } from 'react-router-dom';
+import { useTheme } from '@material-ui/core/styles';
+import useMediaQuery from '@material-ui/core/useMediaQuery';
 
 const Container = styled.div`
   padding: 0px 100px;
@@ -23,7 +25,7 @@ const Container = styled.div`
   flex-direction: column;
   color: white;
   background-color: #263238;
-  ${mobile({ flexDirection: "column" })}
+  ${mobile({ padding: 0, flexDirection: "column" })}
 `;
 
 const Left = styled.div`
@@ -33,6 +35,7 @@ const Left = styled.div`
   align-items: flex-start;
   padding: 15px;
   letter-spacing: 2px;
+  ${mobile({ alignItems: "center" })};
 `;
 
 const Logo = styled.h1`
@@ -103,11 +106,11 @@ const Right = styled.div`
   display:flex;
   flex-direction: column;
   align-content: flex-end;
-  ${mobile({ backgroundColor: "#393939" })};
+  ${mobile({ alignItems: "center" })};
 `;
 
 const ContactItem = styled.div`
-  margin-bottom: 5px;
+  margin-bottom: 15px;
   display: flex;
   align-items: center;
 `;
@@ -119,6 +122,7 @@ const Payment = styled.img`
 const Contents = styled.div`
   display: flex;
   flex-direction: row;
+  ${mobile({flexDirection: "column" })};
 `;
 
 const CopyRightDiv = styled.div`
@@ -134,53 +138,59 @@ const Image = styled.img`
   border-radius: 50%;
 `;
 
-const Footer = () => {
-  const history = useNavigate();
-
+const GetSocialContainer = (history) => {
+  
   const handleClick = (platform) => {
-    const paths = {
-      LinkedIn: 'https://www.linkedin.com/in/adimulamvenugopal/',
-      GitHub: '/github',
-      Hackerrank: '/hackerrank',
-      LeetCode: '/leetcode',
-    };
+    // const paths = {
+    //   LinkedIn: 'https://www.linkedin.com/in/adimulamvenugopal/',
+    //   GitHub: '/github',
+    //   Hackerrank: '/hackerrank',
+    //   LeetCode: '/leetcode',
+    // };
 
-    history(paths[platform]);
+    // history(paths[platform]);
 
   };
-  
+
+  return (
+    <SocialContainer>
+      <AnimatedSocialIcon color="0a66c2" onClick={handleClick("LinkedIn")}>
+        <LinkedIn />
+      </AnimatedSocialIcon>
+      <AnimatedSocialIcon color="010409" onClick={handleClick("GitHub")}>
+        <GitHub />
+      </AnimatedSocialIcon>   
+      {/* <AnimatedSocialIcon color="E60023">
+        <Pinterest />
+      </AnimatedSocialIcon> */}
+      <AnimatedSocialIcon color="263238" onClick={handleClick("Hackerrank")}>
+        <Image src={Hackerrank} /> 
+      </AnimatedSocialIcon>
+      <AnimatedSocialIcon color="263238" onClick={handleClick("LeetCode")}>
+        <Image src={LeetCode} /> 
+      </AnimatedSocialIcon>
+    </SocialContainer>
+  );
+};
+
+const Footer = () => {
+  const history = useNavigate();
+  const theme = useTheme();
+  const isMobile = useMediaQuery(theme.breakpoints.down('sm'));
+
   return (
     <>
       <Container>
         <Contents>
-          <Left>
-            <LogoDiv>
-              <Logo>Venu Adimulam</Logo>
-            </LogoDiv>
-            {/* <Desc>
-              Lorem Ipsum is simply dummy text of the printing and typesetting
-              industry. Lorem Ipsum has been the industry's standard dummy text ever
-              since the 1500s.
-            </Desc> */}
-            <SocialContainer>
-              <AnimatedSocialIcon color="0a66c2" onClick={handleClick("LinkedIn")}>
-                <LinkedIn />
-              </AnimatedSocialIcon>
-              <AnimatedSocialIcon color="010409" onClick={handleClick("GitHub")}>
-                <GitHub />
-              </AnimatedSocialIcon>   
-              {/* <AnimatedSocialIcon color="E60023">
-                <Pinterest />
-              </AnimatedSocialIcon> */}
-              <AnimatedSocialIcon color="263238" onClick={handleClick("Hackerrank")}>
-                <Image src={Hackerrank} /> 
-              </AnimatedSocialIcon>
-              <AnimatedSocialIcon color="263238" onClick={handleClick("LeetCode")}>
-                <Image src={LeetCode} /> 
-              </AnimatedSocialIcon>
-            </SocialContainer>
-          </Left>
-          {/* <Center>
+          {!isMobile ?
+            <Left>
+              <LogoDiv>
+                <Logo>Venu Adimulam</Logo>
+              </LogoDiv>
+              { GetSocialContainer(history)}
+            </Left>
+          : null }
+          {/* <Center>`
             <Title>Usefuls Links</Title>
             <List>
               <ListItem>Home</ListItem>
@@ -203,6 +213,7 @@ const Footer = () => {
             <ContactItem>
               <Mail style={{ marginRight: "10px" }} /> venuadimulam01@gmail.com
             </ContactItem>
+            {isMobile ? GetSocialContainer(history): null}
           </Right>
         </Contents>
         <hr/>

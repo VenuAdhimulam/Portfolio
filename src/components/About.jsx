@@ -1,7 +1,7 @@
 import styled from "styled-components";
 import React from "react";
 import { aboutData } from "../data";
-import { mobile } from "../responsive";
+import { mobile, mobileLandScape } from "../responsive";
 import Headshot from "../images/HeadShot.png";
 
 const Container = styled.div`
@@ -13,7 +13,6 @@ const Container = styled.div`
   width: 100%;
   background: linear-gradient(180deg, #c1eec6, #c1eec6);
   overflow: hidden;
-  ${mobile({ display: "none" })};
 `;
 
 const ImgContainer = styled.div`
@@ -22,6 +21,9 @@ const ImgContainer = styled.div`
   height: 400px;
   position: relative;
   overflow: hidden;
+
+  ${mobile({ width: "300px", height: "auto" })};
+  ${mobileLandScape({ padding: "0px", margin: "50px", width: "auto" })};
 `;
 
 const Image = styled.img`
@@ -33,6 +35,7 @@ const Image = styled.img`
 
 const InfoContainer = styled.div`
   flex: 1.2;
+  ${mobile({ width: "250px", height: "auto" })};
 `;
 
 const Wrapper = styled.div`
@@ -41,6 +44,9 @@ const Wrapper = styled.div`
   transition: all 1.5s ease;
   padding: 20px 100px;
   margin: 0px 50px;
+
+  ${mobile({ padding: "0px", margin: "50px", width: "auto" })};
+  ${mobileLandScape({ width: "auto" })}
 `;
 
 const Slide = styled.div`
@@ -50,6 +56,8 @@ const Slide = styled.div`
   border-radius: 30px;
   background: #fff;
   box-shadow: 0.5px 0.5px 0.5px rgba(0, 0, 0, 0.4);
+
+  ${mobile({ width: "80vw" })};
 `;
 
 const SlideBody = styled.div`
@@ -58,11 +66,19 @@ const SlideBody = styled.div`
   border-radius: 30px;
   padding: 20px 60px;
   overflow: hidden;
+
+  ${mobile({ flexDirection: "column", width: "100%" })}
+  ${mobileLandScape({ flexDirection: "column", width: "auto" })}
 `;
 
 const Title = styled.h1`
   font-size: 50px;
   padding-bottom: 40px;
+
+  ${mobile({ 
+    fontSize: "2.5rem",
+    paddingBottom: "20px"
+   })};
 `;
 
 const Desc = styled.p`
@@ -73,6 +89,14 @@ const Desc = styled.p`
   text-align: justify;
   border-left: 2px solid #6d9e8f;
   padding-left: 20px;
+
+  ${mobile({ 
+    fontSize: "1.2em",
+    lineHeight: "1.5em",
+    wordSpacing: "0.2em",
+    letterSpacing: "0.2rem",
+    textAlign: "start"
+  })};
 `;
 
 const About = () => {
