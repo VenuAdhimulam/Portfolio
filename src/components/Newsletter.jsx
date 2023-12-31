@@ -1,4 +1,3 @@
-import { Send } from "@material-ui/icons";
 import React from "react";
 import styled from "styled-components";
 import { mobile } from "../responsive";
@@ -21,38 +20,6 @@ const Title = styled.h1`
   margin-bottom: 20px;
   ${mobile({ fontSize: "40px" })}
 `;
-
-const Desc = styled.div`
-  font-size: 24px;
-  font-weight: 300;
-  margin-bottom: 20px;
-  ${mobile({ fontSize: "15px" })}
-`;
-
-const InputContainer = styled.div`
-  width: 50%;
-  height: 40px;
-  background-color: white;
-  display: flex;
-  justify-content: space-between;
-  border: 1px solid lightgrey;
-  ${mobile({ width: "100%" })}
-`;
-
-// const Input = styled.input`
-//   border: none;
-//   flex: 8;
-//   padding-left: 20px;
-//   ${mobile({ flex: "9" })}
-// `;
-
-// const Button = styled.button`
-//   flex: 2;
-//   border: none;
-//   background: teal;
-//   color: white;
-//   ${mobile({ flex: "1" })}
-// `;
 
 const Wrapper = styled.div`
   padding: 20px;
@@ -78,11 +45,6 @@ const Input1 = styled.textarea`
   margin: 20px 10px 0px 0px;
   padding: 10px;
 `;
-
-// const Agreement = styled.span`
-//   font-size: 12px;
-//   margin: 20px 0px;
-// `;
 
 const Button = styled.button`
   width: 40%;

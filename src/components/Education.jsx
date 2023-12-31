@@ -127,19 +127,9 @@ const useStyles = makeStyles((theme) => ({
     padding: "15px",
     borderRadius: "8px",
     boxShadow: "0.8px 0.8px 0.8px rgba(0, 0, 0, 0.4)",
-    borderRight: "6px solid #c1eec6",
-    borderLeft: "6px solid #c1eec6",
     borderRight: "4px solid #c1eec6",
     borderLeft: "4px solid #c1eec6",
   },
-  // customTimelineItem: {
-  //   '&.MuiTimelineItem-missingOppositeContent:before': {
-  //     display: 'none', // This will disable the styling for missingOppositeContent
-  //   },
-  // },
-  // secondaryTail: {
-  //   backgroundColor: theme.palette.secondary.main,
-  // },
 }));
 
 const Education = () => {  

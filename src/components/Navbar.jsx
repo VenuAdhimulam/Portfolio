@@ -52,18 +52,34 @@ const Right = styled.div`
 `;
 
 const MenuItems = styled(ScrollLink)`
-  font-size: 14px;
+  font-size: 1em;
   cursor: pointer;
   margin-left: 25px;
-  
+  font-weight: 400;
+  position: relative;
+
+  &:after {
+    content: '';
+    display: block;
+    background-color: #add6b2; 
+    height: 3px;
+    width: 0;
+    position: absolute;
+    bottom: -5px;
+    transition: all 0.4s ease;
+  }
+
   &:hover {
-    text-decoration: underline;
-    text-decoration-color: #add6b2;
-    transform: scale(1.1);
+    transform: scale(1.2);
+  }
+
+  &:hover:after {
+    width: 100%;
   }
 
   ${mobile({ marginLeft: "15px" })}
 `;
+
 
 const Img = styled.img`
   width: 30px;
@@ -71,7 +87,7 @@ const Img = styled.img`
 
 const Navbar = () => {
   const [scrollPosition, setScrollPosition] = useState(0);
-  const [navbarColor, setNavbarColor] = useState('transparent');
+  const [navbarColor, setNavbarColor] = useState('#effbf1');
 
   useEffect(() => {
     const handleScroll = () => {
@@ -81,7 +97,7 @@ const Navbar = () => {
       if (currentPosition > 100) {
         setNavbarColor('white'); 
       } else {
-        setNavbarColor('transparent');
+        setNavbarColor('#effbf1');
       }
     };
 

@@ -1,11 +1,10 @@
-import {React, useEffect} from "react";
+import { React } from "react";
 import styled from "styled-components";
 import { sliderItems } from "../data";
 import { mobile, mobileLandScape } from "../responsive";
 import mainLogo from "../images/main_Logo.svg";
 import Resume from "../pdfs/VenuAdimulam.pdf";
-import ReactGA from "react-ga";
-
+import wave from "../images/svg/wave.svg";
 
 const Container = styled.div`
   width: 100%;
@@ -28,15 +27,9 @@ const Slide = styled.div`
   align-items: center;
   width: 100vw;
   height: 100vh;
-  background-color: ${(props) => props.bg};
-  background: #fff;
-  mix-blend-mode: hard-light;
+  position: relative;
   ${mobile({ height: "100%", flexDirection: "column" })}
   ${mobileLandScape({ height: "100vh" })}
-`;
-
-const ColorBlend = styled.div`
-  background: linear-gradient(180deg, #fff, #ebfaed);
 `;
 
 const ImgContainer = styled.div`
@@ -44,8 +37,10 @@ const ImgContainer = styled.div`
   display: flex;
   align-items: center;
   justify-content: center;
-   
-  ${mobile({ 
+  position: relative;
+  z-Index: 1;
+
+  ${mobile({
     display: "contents",
     padding: 0,
     flex: "0.5",
@@ -53,8 +48,19 @@ const ImgContainer = styled.div`
 `;
 
 const Image = styled.img`
-  width: 70%;
+  width: 80%;
+  z-index: 99;
   ${mobile({ marginTop: "25px", width: "70%;" })}
+`;
+
+const WaveImg = styled.img`
+  width: 100%;
+  position: absolute;
+  aspect-ratio: 900/200;
+  width:100%;
+  top: 0;
+  left: 0;
+  z-index: 1;
 `;
 
 const InfoContainer = styled.div`
@@ -63,8 +69,10 @@ const InfoContainer = styled.div`
   display: flex;
   flex-direction: column;
   justify-content: center;
+  position: relative;
+  z-Index: 1;
 
-  ${mobile({ 
+  ${mobile({
     padding: 0,
     textAlign: "center",
     alignContent: "center",
@@ -82,7 +90,7 @@ const Title = styled.h1`
 
 const Greeting = styled.h6`
   margin: 10px 0px;
-  font-size: 30px;
+  font-size: 1.5rem;
   font-weight: 500;
   letter-spacing: 3px;
   ${mobile({ fontSize: "1.5rem" })}
@@ -91,7 +99,7 @@ const Greeting = styled.h6`
 
 const Desc = styled.p`
   margin: 10px 0px;
-  font-size: 30px;
+  font-size: 1.5rem;
   font-weight: 500;
   letter-spacing: 3px;
   ${mobile({ fontSize: "1.5rem" })}
@@ -128,28 +136,32 @@ const SpanTag = styled.span`
   ${mobile({ color: "#c1eec6" })}
 `;
 
-const Slider = () => {  
-    
+const Slider = () => {
   return (
-    <Container id="home">
-      <Wrapper>
-        {sliderItems.map((item) => (
-          <>
+    <>
+      <Container id="home">
+        <WaveImg src={wave} />  
+        <Wrapper>
+          {sliderItems.map((item) => (
             <Slide bg={item.bg} key={item.id}>
               <ImgContainer>
                 <Image src={mainLogo} />
               </ImgContainer>
               <InfoContainer>
                 <Greeting>{item.greeting}</Greeting>
-                <Title>Venu<SpanTag style={{color:"#add6b2"}}> Adimulam</SpanTag></Title>
+                <Title>
+                  Venu<SpanTag style={{ color: "#add6b2" }}> Adimulam</SpanTag>
+                </Title>
                 <Desc>{item.desc}</Desc>
-                <Button href={Resume} target="_blank">View Resume</Button>
+                <Button href={Resume} target="_blank">
+                  View Resume
+                </Button>
               </InfoContainer>
             </Slide>
-          </>
-        ))}
-      </Wrapper>
-    </Container>
+          ))}
+        </Wrapper>
+      </Container>
+    </>
   );
 };
 

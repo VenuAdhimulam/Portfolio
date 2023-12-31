@@ -14,8 +14,8 @@ import React from "react";
 import styled from "styled-components";
 import { mobile } from "../responsive";
 import Hackerrank from "../images/Hackerrank_Logo.png";
+import TwitterLogo from "../images/svg/twitter.svg";
 import LeetCode from "../images/LeetCode_Logo.jpg";
-import { useNavigate } from 'react-router-dom';
 import { useTheme } from '@material-ui/core/styles';
 import useMediaQuery from '@material-ui/core/useMediaQuery';
 
@@ -33,19 +33,20 @@ const Left = styled.div`
   display: flex;
   flex-direction: column;
   align-items: flex-start;
-  padding: 15px;
+  padding: 20px;
   letter-spacing: 2px;
   ${mobile({ alignItems: "center" })};
 `;
 
 const Logo = styled.h1`
-  // flex: 1;
+  flex: 1;
 `;
 
 const LogoDiv = styled.div`
   flex: 1;
   display: flex;
   align-items: center;
+  margin-bottom: 10px;
 `;
 
 const Desc = styled.p`
@@ -54,9 +55,10 @@ const Desc = styled.p`
 
 const SocialContainer = styled.div`
   display: flex;
+  margin-bottom: 10px;
 `;
 
-const SocialIcon = styled.div`
+const SocialIcon = styled.a`
   width: 40px;
   height: 40px;
   border-radius: 50%;
@@ -66,6 +68,8 @@ const SocialIcon = styled.div`
   align-items: center;
   justify-content: center;
   margin-left: 20px;
+
+  ${mobile({ width: "30px", height: "30px" })};
 `;
 
 const AnimatedSocialIcon = styled(SocialIcon)`
@@ -84,20 +88,7 @@ const Center = styled.div`
 `;
 
 const Title = styled.h3`
-  margin: 15px 0px;
-`;
-
-const List = styled.ul`
-  margin: 0;
-  padding: 0;
-  list-style: none;
-  display: flex;
-  flex-wrap: wrap;
-`;
-
-const ListItem = styled.li`
-  width: 50%;
-  margin-bottom: 10px;
+  margin: 10px 0px;
 `;
 
 const Right = styled.div`
@@ -110,13 +101,9 @@ const Right = styled.div`
 `;
 
 const ContactItem = styled.div`
-  margin-bottom: 15px;
+  margin-bottom: 10px;
   display: flex;
   align-items: center;
-`;
-
-const Payment = styled.img`
-  width: 50%;
 `;
 
 const Contents = styled.div`
@@ -138,43 +125,30 @@ const Image = styled.img`
   border-radius: 50%;
 `;
 
-const GetSocialContainer = (history) => {
+const GetSocialContainer = () => {
   
-  const handleClick = (platform) => {
-    // const paths = {
-    //   LinkedIn: 'https://www.linkedin.com/in/adimulamvenugopal/',
-    //   GitHub: '/github',
-    //   Hackerrank: '/hackerrank',
-    //   LeetCode: '/leetcode',
-    // };
-
-    // history(paths[platform]);
-
-  };
-
   return (
     <SocialContainer>
-      <AnimatedSocialIcon color="0a66c2" onClick={handleClick("LinkedIn")}>
+      <AnimatedSocialIcon color="0a66c2" href="https://www.linkedin.com/in/adimulamvenugopal/">
         <LinkedIn />
       </AnimatedSocialIcon>
-      <AnimatedSocialIcon color="010409" onClick={handleClick("GitHub")}>
+      <AnimatedSocialIcon color="010409" href="https://github.com/VenuAdhimulam">
         <GitHub />
       </AnimatedSocialIcon>   
-      {/* <AnimatedSocialIcon color="E60023">
-        <Pinterest />
-      </AnimatedSocialIcon> */}
-      <AnimatedSocialIcon color="263238" onClick={handleClick("Hackerrank")}>
+      <AnimatedSocialIcon color="263238" href="https://www.hackerrank.com/profile/VenuAdimulam">
         <Image src={Hackerrank} /> 
       </AnimatedSocialIcon>
-      <AnimatedSocialIcon color="263238" onClick={handleClick("LeetCode")}>
-        <Image src={LeetCode} /> 
+      <AnimatedSocialIcon color="263238" href="https://twitter.com/VenuAdimulam">
+        <Image src={TwitterLogo} /> 
       </AnimatedSocialIcon>
+      {/* <AnimatedSocialIcon color="263238" href="https://leetcode.com/VenuAdimulam/">
+        <Image src={LeetCode} /> 
+      </AnimatedSocialIcon> */}
     </SocialContainer>
   );
 };
 
 const Footer = () => {
-  const history = useNavigate();
   const theme = useTheme();
   const isMobile = useMediaQuery(theme.breakpoints.down('sm'));
 
@@ -187,33 +161,18 @@ const Footer = () => {
               <LogoDiv>
                 <Logo>Venu Adimulam</Logo>
               </LogoDiv>
-              { GetSocialContainer(history)}
+              { GetSocialContainer()}
             </Left>
           : null }
-          {/* <Center>`
-            <Title>Usefuls Links</Title>
-            <List>
-              <ListItem>Home</ListItem>
-              <ListItem>Cart</ListItem>
-              <ListItem>Men's Fashion</ListItem>
-              <ListItem>Woman Fashion</ListItem>
-              <ListItem>Accesories</ListItem>
-              <ListItem>My Account</ListItem>
-              <ListItem>Ordr Tracking</ListItem>
-              <ListItem>Wish List</ListItem>
-              <ListItem>Wish List</ListItem>
-              <ListItem>Terms</ListItem>
-            </List>
-          </Center> */}
           <Right>
             <Title>Contact</Title>
             <ContactItem>
               <Phone style={{ marginRight: "10px" }} /> +1 216 467 0834
             </ContactItem>
             <ContactItem>
-              <Mail style={{ marginRight: "10px" }} /> venuadimulam01@gmail.com
+              <Mail style={{ marginRight: "10px" }} /> <a style={{ color: "#fff", textDecoration: "none" }} href='mailto:venuadimulam01@gmail.com?body=Hello Venu Adimulam,'>venuadimulam01@gmail.com</a>
             </ContactItem>
-            {isMobile ? GetSocialContainer(history): null}
+            {isMobile ? GetSocialContainer(): null}
           </Right>
         </Contents>
         <hr/>

@@ -100,6 +100,11 @@ const TechStackWrapper = styled.div`
 const TechStack = styled.img`
   width: 40px;
   margin: 10px;
+
+  &:hover {
+    transition: all 0.4s ease;
+    transform: scale(1.2);
+  }
 `;
 
 function Experience() {
@@ -145,7 +150,7 @@ function Experience() {
   };
 
   const theme = useTheme();
-  const isMobile = useMediaQuery(theme.breakpoints.down('sm')); // Adjust the breakpoint as needed
+  const isMobile = useMediaQuery(theme.breakpoints.down('sm'));
 
   return (
   <Container id="experience">
