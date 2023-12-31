@@ -1,5 +1,5 @@
 import { useEffect } from "react";
-import Home from "./pages/Home";
+import Home from "./components/Home";
 import Slider from "./components/Slider";
 import About from "./components/About";
 import Certifications from "./components/Certifications";

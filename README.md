@@ -23,4 +23,4 @@ Feel free to explore my projects and reach out if you have any questions or oppo
 ![Web View](src/images/WebView.png)
 
 ### Mobile View
-![Mobile View](src/images/MobileView.png)
+<img src="src/images/MobileView.png" alt="Mobile View" width="300" />
