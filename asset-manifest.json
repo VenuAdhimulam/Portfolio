@@ -1,7 +1,7 @@
 {
   "files": {
-    "main.js": "/Portfolio/static/js/main.6952136e.chunk.js",
-    "main.js.map": "/Portfolio/static/js/main.6952136e.chunk.js.map",
+    "main.js": "/Portfolio/static/js/main.9cf2b3b2.chunk.js",
+    "main.js.map": "/Portfolio/static/js/main.9cf2b3b2.chunk.js.map",
     "runtime-main.js": "/Portfolio/static/js/runtime-main.163f731f.js",
     "runtime-main.js.map": "/Portfolio/static/js/runtime-main.163f731f.js.map",
     "static/js/2.6a0e8535.chunk.js": "/Portfolio/static/js/2.6a0e8535.chunk.js",
@@ -11,6 +11,7 @@
     "static/media/AWS.e67fd2c1.svg": "/Portfolio/static/media/AWS.e67fd2c1.svg",
     "static/media/AWS_Cloud_Computing.452652bb.png": "/Portfolio/static/media/AWS_Cloud_Computing.452652bb.png",
     "static/media/Accenture_Logo.53de8e7c.png": "/Portfolio/static/media/Accenture_Logo.53de8e7c.png",
+    "static/media/Android.9ea10e16.svg": "/Portfolio/static/media/Android.9ea10e16.svg",
     "static/media/BitBucket.8f525575.svg": "/Portfolio/static/media/BitBucket.8f525575.svg",
     "static/media/Bootstarp.83cae03a.svg": "/Portfolio/static/media/Bootstarp.83cae03a.svg",
     "static/media/BottomWaves.53b197f8.svg": "/Portfolio/static/media/BottomWaves.53b197f8.svg",
@@ -36,7 +37,9 @@
     "static/media/MSSQL.6c83aeae.svg": "/Portfolio/static/media/MSSQL.6c83aeae.svg",
     "static/media/Mize_Logo.81b17fee.jpg": "/Portfolio/static/media/Mize_Logo.81b17fee.jpg",
     "static/media/MySQL.2b2e85ce.svg": "/Portfolio/static/media/MySQL.2b2e85ce.svg",
+    "static/media/NasscomLogo.a52574c9.svg": "/Portfolio/static/media/NasscomLogo.a52574c9.svg",
     "static/media/NodeJS.cc48afeb.svg": "/Portfolio/static/media/NodeJS.cc48afeb.svg",
+    "static/media/Postman.52856718.svg": "/Portfolio/static/media/Postman.52856718.svg",
     "static/media/ProjectsLogo.e8c4d5f3.svg": "/Portfolio/static/media/ProjectsLogo.e8c4d5f3.svg",
     "static/media/Python_Logo.eb067c54.png": "/Portfolio/static/media/Python_Logo.eb067c54.png",
     "static/media/React.aacbdc83.svg": "/Portfolio/static/media/React.aacbdc83.svg",
@@ -47,6 +50,7 @@
     "static/media/Stripe.fe9a9103.svg": "/Portfolio/static/media/Stripe.fe9a9103.svg",
     "static/media/Tableau.42cc3d3a.svg": "/Portfolio/static/media/Tableau.42cc3d3a.svg",
     "static/media/TopWaves.72b1f08b.svg": "/Portfolio/static/media/TopWaves.72b1f08b.svg",
+    "static/media/Typescript.c7620498.svg": "/Portfolio/static/media/Typescript.c7620498.svg",
     "static/media/Udemy_Logo.085106ff.png": "/Portfolio/static/media/Udemy_Logo.085106ff.png",
     "static/media/VJIT_Logo.cb806ae8.png": "/Portfolio/static/media/VJIT_Logo.cb806ae8.png",
     "static/media/VS_Code.52a8d9ba.svg": "/Portfolio/static/media/VS_Code.52a8d9ba.svg",
@@ -61,6 +65,6 @@
   "entrypoints": [
     "static/js/runtime-main.163f731f.js",
     "static/js/2.6a0e8535.chunk.js",
-    "static/js/main.6952136e.chunk.js"
+    "static/js/main.9cf2b3b2.chunk.js"
   ]
 }
