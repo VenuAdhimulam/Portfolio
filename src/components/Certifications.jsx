@@ -1,6 +1,6 @@
 import React from "react";
 import styled from "styled-components";
-import { mobile } from "../responsive";
+import { mobile, mobileLandScape } from "../responsive";
 import Certificate from "./Certificate";
 import { certifications } from "../data";
 import Grid2 from "@mui/material/Unstable_Grid2/Grid2";
@@ -25,6 +25,7 @@ const Title = styled.h1`
   margin-bottom: 15px;
   letter-spacing: 2px;
   ${mobile({ fontSize: "40px" })}
+  ${mobileLandScape({ fontSize: "40px" })}
 `;
 
 const CardsContainer = styled(Grid2)`
@@ -34,6 +35,7 @@ const CardsContainer = styled(Grid2)`
   flex-wrap: wrap;
   justify-content: center;
   ${mobile({ margin: 0, })}
+  ${mobileLandScape({ margin: 20})}
 `;
 
 const Wrapper = styled.div`
@@ -44,6 +46,7 @@ const Wrapper = styled.div`
   justify-content:center;
   flex-direction: row;
   ${mobile({ margin: 0, padding : 0, flexDirection: "column" })}
+  ${mobileLandScape({ margin: 20, padding : 20, flexDirection: "column" })}
 `;
 
 const Desc = styled.p`

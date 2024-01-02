@@ -55,6 +55,8 @@ const Title = styled.h1`
   font-size: 50px;
   margin-bottom: 20px;
   letter-spacing: 2px;
+  ${mobile({ "font-size": "40px" })}
+  ${mobileLandScape({ "font-size": "40px" })}
 `;
 
 const Desc = styled.p`

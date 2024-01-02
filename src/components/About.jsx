@@ -23,7 +23,7 @@ const ImgContainer = styled.div`
   overflow: hidden;
 
   ${mobile({ width: "300px", height: "auto" })};
-  ${mobileLandScape({ padding: "0px", margin: "50px", width: "auto" })};
+  ${mobileLandScape({ padding: "0px", margin: "10px", width: "300px", height: "auto" })};
 `;
 
 const Image = styled.img`
@@ -58,6 +58,7 @@ const Slide = styled.div`
   box-shadow: 0.5px 0.5px 0.5px rgba(0, 0, 0, 0.4);
 
   ${mobile({ width: "80vw" })};
+  ${mobileLandScape({ width: "80vw" })};
 `;
 
 const SlideBody = styled.div`
@@ -77,7 +78,12 @@ const Title = styled.h1`
   letter-spacing: 2px;
 
   ${mobile({ 
-    fontSize: "2.5rem",
+    fontSize: "40px",
+    paddingBottom: "20px"
+   })};
+
+   ${mobileLandScape({ 
+    fontSize: "40px",
     paddingBottom: "20px"
    })};
 `;
@@ -93,6 +99,14 @@ const Desc = styled.p`
   color: rgba(0, 0, 0, 0.66);
 
   ${mobile({ 
+    fontSize: "1.2em",
+    lineHeight: "1.5em",
+    wordSpacing: "0.2em",
+    letterSpacing: "0.2rem",
+    textAlign: "start"
+  })};
+
+  ${mobileLandScape({ 
     fontSize: "1.2em",
     lineHeight: "1.5em",
     wordSpacing: "0.2em",

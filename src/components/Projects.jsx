@@ -27,6 +27,7 @@ const Slide = styled.div`
   padding: 50px;
   margin: 25px 50px;
   ${mobile({ padding: 0, margin: "10px", marginTop: "20px"})};
+  ${mobileLandScape({ padding: 0, margin: "10px", marginTop: "20px"})};
 `;
 
 const ImgContainer = styled.div`
@@ -56,6 +57,8 @@ const Title = styled.h1`
   font-size: 50px;
   margin-bottom: 20px;
   letter-spacing: 2px;
+  ${mobile({ "font-size": "40px" })}
+  ${mobileLandScape({ "font-size": "40px" })}
 `;
 
 const Desc = styled.p`
@@ -96,6 +99,7 @@ const BodyDiv = styled.div`
   align-items: center;
 
   ${mobile({ flexDirection: "column"})};
+  ${mobileLandScape({ flexDirection: "row"})};
 `;
 
 const DescDiv = styled.div`

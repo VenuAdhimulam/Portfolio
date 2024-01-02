@@ -1,7 +1,7 @@
 import {  SearchOutlined } from "@material-ui/icons";
 import React from "react";
 import styled from "styled-components";
-import { mobile } from "../responsive";
+import { mobile, mobileLandScape } from "../responsive";
 
 const Info = styled.div`
   opacity: 0;
@@ -43,6 +43,7 @@ const Container = styled.div`
   }
 
   ${mobile({ width: "100px", height: "100px" })}
+  ${mobileLandScape({ width: "100px", height: "100px" })};
 `;
 
 const Circle = styled.div`
@@ -52,6 +53,7 @@ const Circle = styled.div`
   background-color: white;
   position: absolute;
   ${mobile({ width: "75px", height: "75px" })}
+  ${mobileLandScape({ width: "75px", height: "75px" })}
 `;
 
 const Image = styled.img`

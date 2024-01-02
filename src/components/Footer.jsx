@@ -12,7 +12,7 @@ import {
 } from "@material-ui/icons";
 import React from "react";
 import styled from "styled-components";
-import { mobile } from "../responsive";
+import { mobile, mobileLandScape } from "../responsive";
 import Hackerrank from "../images/Hackerrank_Logo.png";
 import TwitterLogo from "../images/svg/twitter.svg";
 import LeetCode from "../images/LeetCode_Logo.jpg";
@@ -69,7 +69,7 @@ const SocialIcon = styled.a`
   justify-content: center;
   margin: 6px;
 
-  ${mobile({ width: "30px", height: "30px" })};
+  ${mobile({ margin: "10px", width: "30px", height: "30px" })};
 `;
 
 const AnimatedSocialIcon = styled(SocialIcon)`
@@ -97,7 +97,8 @@ const Right = styled.div`
   display:flex;
   flex-direction: column;
   align-content: flex-end;
-  ${mobile({ alignItems: "center" })};
+  ${mobile({ alignItems: "center", justifyContent: "center" })};
+  ${mobileLandScape({ alignItems: "center", justifyContent: "center" })};
 `;
 
 const ContactItem = styled.div`
@@ -110,6 +111,7 @@ const Contents = styled.div`
   display: flex;
   flex-direction: row;
   ${mobile({flexDirection: "column" })};
+  ${mobileLandScape({flexDirection: "column" })};
 `;
 
 const CopyRightDiv = styled.div`

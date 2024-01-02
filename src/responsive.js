@@ -10,7 +10,7 @@ export const mobile = (props) => {
 
 export const mobileLandScape = (props) => {
   return css`
-    @media only screen and (max-device-width: 809px) and (orientation: landscape) {
+    @media only screen and (max-device-width: 844px) and (orientation: landscape) {
       ${props}
     }
   `;

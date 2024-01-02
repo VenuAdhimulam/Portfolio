@@ -1,6 +1,6 @@
 import React from "react";
 import styled from "styled-components";
-import { mobile } from "../responsive";
+import { mobile, mobileLandScape } from "../responsive";
 import { makeStyles } from '@material-ui/core/styles';
 import Timeline from '@material-ui/lab/Timeline';
 import TimelineItem from '@material-ui/lab/TimelineItem';
@@ -44,6 +44,7 @@ const Title = styled.h1`
   margin-top: 60px;
   letter-spacing: 2px;
   ${mobile({ fontSize: "40px" })}
+  ${mobileLandScape({ "font-size": "40px" })}
 `;
 
 const CardsContainer = styled.div`
