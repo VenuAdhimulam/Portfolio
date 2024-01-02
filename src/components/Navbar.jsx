@@ -40,6 +40,7 @@ const Center = styled.div`
 
 const Logo = styled.h1`
   font-weight: bold;
+  letter-spacing: 2px;
   ${mobile({ fontSize: "24px" })}
 `;
 
@@ -57,6 +58,7 @@ const MenuItems = styled(ScrollLink)`
   margin-left: 25px;
   font-weight: 400;
   position: relative;
+  letter-spacing: 2px; 
 
   &:after {
     content: '';

@@ -143,7 +143,8 @@ const TechStackWrapper = styled(Grid2)`
 
 const TechStack = styled.img`
   width: 40px;
-  margin: 10px;
+  height: 40px;
+  object-fit: contain;
   margin: 10px;
 
   &:hover {

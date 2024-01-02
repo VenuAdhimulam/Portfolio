@@ -32,7 +32,7 @@ const CardsContainer = styled(Grid2)`
   display: flex;
   margin: 50px;
   flex-wrap: wrap;
-  justify-content: space-between;
+  justify-content: center;
   ${mobile({ margin: 0, })}
 `;
 

@@ -84,6 +84,7 @@ const InfoContainer = styled.div`
 
 const Title = styled.h1`
   font-size: 80px;
+  letter-spacing: 2px;
   ${mobile({ fontSize: "40px" })}
   ${mobileLandScape({ fontSize: "35px" })}
 `;

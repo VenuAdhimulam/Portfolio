@@ -38,6 +38,10 @@ import Laravel from "./images/Laravel.png";
 import Figma from "./images/Figma.png";
 import MongoDB from "./images/mongodb.svg";
 import SourceTree from "./images/svg/Sourcetree.svg";
+import Typescript from "./images/svg/Typescript.svg";
+import Postman from "./images/svg/Postman.svg";
+import Android from "./images/svg/Android.svg";
+import Nasscom from "./images/svg/NasscomLogo.svg";
 
 export const sliderItems = [
   {
@@ -101,7 +105,7 @@ export const projectsData = [
     title: "Expense Management",
     desc: "Automates and streamlines the tracking, submission, approval, and management of expenses within an organization, developed with React.js & Laravel as key technologies.",
     techStack: {
-      logos : [ Laravel, React, Redux, JavaScript, Firebase, Git, GoogleAnalytics, MySQL, VSCode ],
+      logos : [ Laravel, React, Redux, JavaScript, Firebase, Postman, Git, GoogleAnalytics, MySQL, VSCode ],
     },
   },
   {
@@ -129,7 +133,7 @@ export const experiences = [
       ],
     },
     techStack: {
-      logos : [ React, Redux, Laravel, JavaScript, AWS, Git, SourceTree, Figma, Jira, GoogleAnalytics, MySQL, VSCode ],
+      logos : [ React, Redux, Laravel, JavaScript, Postman, AWS, Git, SourceTree, Figma, Jira, Tableau, GoogleAnalytics, MySQL, VSCode ],
     },
   },
   // {
@@ -154,7 +158,7 @@ export const experiences = [
       ],
     },
     techStack: {
-      logos : [ Java, Springboot, React, JavaScript, BitBucket, Docker, Jira, IntellijIDE],
+      logos : [ Java, Springboot, React, JavaScript, BitBucket, Postman, Docker, Jira, MSSQL, IntellijIDE],
     },
   },
   {
@@ -171,7 +175,7 @@ export const experiences = [
       ],
     },
     techStack: {
-      logos : [ Java, Springboot, React, Redux, JavaScript, AWS, Git, Jira, Jenkins, MySQL, IntellijIDE ],
+      logos : [ Java, Springboot, React, Redux, JavaScript, Postman, AWS, Git, Jira, Jenkins, MySQL, IntellijIDE ],
     },
   },
   {
@@ -234,6 +238,13 @@ export const certifications = [
     date: "Aug 02, 2023",
     img: SQL_Logo,
     link: "https://www.hackerrank.com/certificates/7a9715856f2f",
+  },
+  {
+    id: "7",
+    title: "Applied CS with Android",
+    date: "Aug 02, 2023",
+    img: Android,
+    link: "https://drive.google.com/file/d/1Y56OAGI27WctxraP7sew6l7BdGjdzf-C/view?usp=sharing",
   },
 ];
 

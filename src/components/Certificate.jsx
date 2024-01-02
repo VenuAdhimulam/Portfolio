@@ -55,7 +55,7 @@ const Circle = styled.div`
 `;
 
 const Image = styled.img`
-  height: 40%;
+  height: 50%;
   z-index: 2;
   border-radius: 39%;
 `;
