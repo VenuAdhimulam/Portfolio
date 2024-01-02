@@ -10,6 +10,8 @@ import WaverBottom from "../components/WaverBottom";
 import Certifications from "../components/Certifications";
 import Experience from "../components/Experience";
 import Education from "../components/Education";
+import TechStack from "./TechStack";
+import Projects from "./Projects";
 
 const Home = () => {
   return (
@@ -21,6 +23,8 @@ const Home = () => {
         <About/>
         <WaverBottom/>
         <Experience/>
+        {/* <TechStack /> */}
+        <Projects />
         <Education/>
         <WaverTop/>
         <Certifications/> 

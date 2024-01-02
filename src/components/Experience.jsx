@@ -14,6 +14,7 @@ import Typography from '@material-ui/core/Typography';
 import { experiences } from "../data";
 import { useTheme } from '@material-ui/core/styles';
 import useMediaQuery from '@material-ui/core/useMediaQuery';
+import Grid2 from "@mui/material/Unstable_Grid2/Grid2";
 
 const useStyles = makeStyles((theme) => ({
   paper: {
@@ -33,6 +34,7 @@ const Container = styled.div`
   display: flex;
   align-items: center;
   flex-direction: column;
+  margin: 25px 50px;
   ${mobile({ padding: "10px" })}
 `;
 
@@ -40,13 +42,13 @@ const Title = styled.h1`
   font-size: 50px;
   margin-bottom: 30px;
   margin-top: 60px;
+  letter-spacing: 2px;
   ${mobile({ fontSize: "40px" })}
 `;
 
 const CardsContainer = styled.div`
   display: flex;
   padding: 0 65px 65px 65px;
-  margin: 20px 65px 65px 65px;
   flex-wrap: wrap;
   justify-content: space-between;
   ${mobile({ 
@@ -60,8 +62,9 @@ const Wrapper = styled.div`
   display: flex;
   margin-bottom: 30px;
   border-bottom: 1px solid #c1eec6;
+  align-items: center;
 
-  ${mobile({ alignItems: "flex-start", marginBottom: "20px" })}
+  ${mobile({ marginBottom: "20px" })}
 `;
 
 const DescDiv = styled.div`
@@ -84,7 +87,7 @@ const Logo = styled.img`
   width: 120px;
 `;
 
-const TechStackWrapper = styled.div`
+const TechStackWrapper = styled(Grid2)`
   flex: 1;
   height: 100%;
   width: 100%;
@@ -94,7 +97,6 @@ const TechStackWrapper = styled.div`
   flex-direction: row;
   align-items: center;
   justify-content: center;  
-  justify-content: space-between;
 `;
 
 const TechStack = styled.img`
@@ -103,8 +105,12 @@ const TechStack = styled.img`
 
   &:hover {
     transition: all 0.4s ease;
-    transform: scale(1.2);
+    transform: scale(1.4);
   }
+`;
+
+const Desc = styled.p`
+  color: rgba(0, 0, 0, 0.66)
 `;
 
 function Experience() {
@@ -123,30 +129,30 @@ function Experience() {
     textAlign: "left",
     padding: "25px",
     borderRight: "4px solid #c1eec6",
-    borderLeft: "4px solid #c1eec6"
+    borderLeft: "4px solid #c1eec6",
   };
 
   const descTypo = {
+    lineHeight: 2,
     textAlign: "justify",
-    marginBottom: "20px",
+    marginBottom: "10px",
     fontWeight: 500,
     letterSpacing: "3px",
-    fontSize: "1em",
-    color: "rgba(0, 0, 0, 0.66)"
+    fontSize: "1.1em",
   };
 
   const compnayTypo = {
     fontWeight: 500,
-    fontSize: "1.4em",
+    fontSize: "1.5em",
     letterSpacing: "2px",
+    marginBottom: "5px",
   };
 
   const roleTypo = {
-    marginBottom: "5px",
+    marginBottom: "10px",
     fontSize: "1.2em",
     fontWeight: 500,
     letterSpacing: "3px",
-    color: "rgba(0, 0, 0, 0.66)"
   };
 
   const theme = useTheme();
@@ -161,9 +167,9 @@ function Experience() {
           <TimelineItem key={item.id} className={classes.customTimelineItem}>
              {!isMobile ? (
               <TimelineOppositeContent>
-                <Typography variant="body2" color="textSecondary">
+                <Desc variant="body2" color="textSecondary">
                   {item.date} 
-                </Typography>
+                </Desc>
               </TimelineOppositeContent>
             ) : null}
             {/* {!isMobile ? ( */}
@@ -176,18 +182,18 @@ function Experience() {
               <Paper elevation={3} className={classes.paper} style={paperDiv}>
                 <Wrapper>
                   <DescDiv>
-                    <Typography variant="h6" component="h1" style={roleTypo}>{item.role}</Typography>
-                    <Typography style={compnayTypo}>{item.company}</Typography>
+                    <Desc style={roleTypo}>{item.role}</Desc>
+                    <Desc style={compnayTypo}>{item.company}</Desc>
                   </DescDiv>
                   <LogoDiv>
                     <Logo src={item.img}/>
                   </LogoDiv>
                 </Wrapper>
                 {item.desc.points.map((point, index) => (
-                  <Typography key={index} style={descTypo}>{point}</Typography>
+                  <Desc key={index} style={descTypo}>{point}</Desc>
                 ))}
                 {/* <TechStackContainer> */}
-                <TechStackWrapper>
+                <TechStackWrapper r>
                   {item.techStack.logos.map((logo, index) => (
                     <TechStack key={index} src={logo}/>
                   ))}

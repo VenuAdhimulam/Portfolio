@@ -74,6 +74,7 @@ const SlideBody = styled.div`
 const Title = styled.h1`
   font-size: 50px;
   padding-bottom: 40px;
+  letter-spacing: 2px;
 
   ${mobile({ 
     fontSize: "2.5rem",
@@ -89,6 +90,7 @@ const Desc = styled.p`
   text-align: justify;
   border-left: 2px solid #6d9e8f;
   padding-left: 20px;
+  color: rgba(0, 0, 0, 0.66);
 
   ${mobile({ 
     fontSize: "1.2em",

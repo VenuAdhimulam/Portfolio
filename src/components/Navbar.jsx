@@ -77,7 +77,7 @@ const MenuItems = styled(ScrollLink)`
     width: 100%;
   }
 
-  ${mobile({ marginLeft: "15px" })}
+  ${mobile({ marginLeft: "10px" })}
 `;
 
 
@@ -123,6 +123,7 @@ const Navbar = () => {
           <MenuItems smooth={true} duration={2000} to="home" >Home</MenuItems>
           <MenuItems smooth={true} duration={2000} to="about" >About</MenuItems>
           <MenuItems smooth={true} duration={2000} to="experience" >Experience</MenuItems>
+          <MenuItems smooth={true} duration={2000} to="projects" >Projects</MenuItems>
           <MenuItems smooth={true} duration={2000} to="education" >Education</MenuItems>
           <MenuItems smooth={true} duration={2000} to="certificates" >Certificates</MenuItems>
         </Right>

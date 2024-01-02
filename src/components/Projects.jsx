@@ -1,12 +1,13 @@
 import React from "react";
 import styled from "styled-components";
-import { eduObj } from "../data";
+import { projectsData } from "../data";
 import { mobile, mobileLandScape } from "../responsive";
-import Education_Logo from "../images/education_Logo.svg";
 import { Paper } from "@material-ui/core";
 import { useTheme } from '@material-ui/core/styles';
 import { makeStyles } from '@material-ui/core/styles';
 import useMediaQuery from '@material-ui/core/useMediaQuery';
+import ProjectsLogo from "../images/svg/ProjectsLogo.svg";
+import Grid2 from "@mui/material/Unstable_Grid2/Grid2";
 
 const Container = styled.div`
   width: 100%;
@@ -39,8 +40,8 @@ const ImgContainer = styled.div`
 `;
 
 const Image = styled.img`
-  height: 70%;
-  width: 70%
+  height: 80%;
+  width: 80%
 `;
 
 const InfoContainer = styled.div`
@@ -63,7 +64,12 @@ const Desc = styled.p`
   letter-spacing: 3px;
   font-size: 1em;
   color: rgba(0, 0, 0, 0.66);
-  text-align: justify;
+  textAlign: justify;
+  marginBottom: 20px;
+  fontWeight: 500;
+  letterSpacing: 3px;
+  fontSize: 1em;
+  color: rgba(0, 0, 0, 0.66);
 `;
 
 const CourseTypo = styled.p`
@@ -71,62 +77,50 @@ const CourseTypo = styled.p`
   font-size: 1.5em;
   font-weight: 500;
   letter-spacing: 2px;
+  text-align: center;
 `;
 
 const TitleDiv = styled.div`
+  display: flex;
+  justify-content: center;
   padding: 10px;
   border-radius: 8px;
   margin: 15xpx 0px;
-  display: flex;
-  ${mobile({ justifyContent: "center" })}
 `;
 
 const BodyDiv = styled.div`
   border-radius: 8px;
   margin: 15xpx 0px;
-`;
-
-const BoxDiv = styled.div`
   display: flex;
-  margin: 30px 5px;
-  border-right: 6px solid #c1eec6;
-  border-left: 6px solid #c1eec6;
-  padding: 15px;
-  border-radius: 8px;
-  box-shadow: 0.8px 0.8px 0.8px rgba(0, 0, 0, 0.4);
+  justify-content: center;
+  align-items: center;
+
+  ${mobile({ flexDirection: "column"})};
 `;
 
 const DescDiv = styled.div`
-  flex: 1.5;
   display: flex;
   flex-direction: column;
-  align-items: flex-start;
-  justify-content: center;
-`;
-
-const LogoDiv = styled.div`
-  flex: 0.5;
-  // height: 100%;
-  display: flex;
   align-items: center;
   justify-content: center;
-`;
-
-const Logo = styled.img`
-  width: ${(props) => props.size};
-  ${mobile({ width: "100px" })};
+  line-height: 2;
+  text-align: justify;
 `;
 
 const useStyles = makeStyles((theme) => ({
   paper: {
+    width: "300px",
+    height: "450px",
     display: "flex",
-    margin: "30px 5px",
+    flexDirection: "column",
+    margin: "20px",
     padding: "15px",
     borderRadius: "8px",
     boxShadow: "0.8px 0.8px 0.8px rgba(0, 0, 0, 0.4)",
     // borderRight: "4px solid #c1eec6",
-    borderLeft: "4px solid #edfbee",
-    background: "linear-gradient(90deg, #edfbee, #FFF, #FFF)",
+    // borderLeft: "4px solid #c1eec6",
+    background: "linear-gradient(180deg, #edfbee, #FFF, #FFF)",
+
     "&:hover": {
       transition: "all 0.4s ease",
       transform: "scale(1.1)"
@@ -134,40 +128,62 @@ const useStyles = makeStyles((theme) => ({
   },
 }));
 
-const Education = () => {  
+const TechStackWrapper = styled(Grid2)`
+  flex: 1;
+  height: 100%;
+  width: 100%;
+  display: flex;
+  margin-top: 20px;
+  flex-wrap: wrap;
+  flex-direction: row;
+  align-items: center;
+  border-top: 1px solid #c1eec4;
+  justify-content: center;  
+`;
+
+const TechStack = styled.img`
+  width: 40px;
+  margin: 10px;
+  margin: 10px;
+
+  &:hover {
+    transition: all 0.2s ease;
+    transform: scale(1.3);
+  }
+`;
+
+const Projects = () => {  
   const classes = useStyles();
-  const theme = useTheme();
-  const isMobile = useMediaQuery(theme.breakpoints.down('sm'));
 
   return (
-    <Container id="education">
+    <Container id="projects">
         <Slide>
+          <ImgContainer>
+            <Image src={ProjectsLogo} />
+          </ImgContainer>
           <InfoContainer>
             <TitleDiv>
-              <Title>Education<span style={{color: "#c1eec7"}}></span></Title>
+              <Title>Projects<span style={{color: "#c1eec7"}}></span></Title>
             </TitleDiv>
             <BodyDiv>
-              {eduObj.map((item) => (
+              {projectsData.map((item) => (
                 <Paper variant="elevation" className={classes.paper}>
                   <DescDiv>
-                    <Desc>{item.degree}</Desc>
-                    <CourseTypo>{item.stream}</CourseTypo>
-                    <Desc>{item.university}</Desc>
-                    <Desc>{item.tenure}</Desc>
+                    <CourseTypo>{item.title}</CourseTypo>
+                    <Desc>{item.desc}</Desc>
                   </DescDiv>
-                  <LogoDiv>
-                    <Logo src={item.logo} size={isMobile ? "80px !important" : item.logoSize}/>
-                  </LogoDiv>
+                  <TechStackWrapper>
+                    {item.techStack.logos.map((logo, index) => (
+                      <TechStack key={index} src={logo}/>
+                    ))}
+                  </TechStackWrapper>
                 </Paper>
               ))}
             </BodyDiv>
           </InfoContainer>
-          <ImgContainer>
-            <Image src={Education_Logo} />
-          </ImgContainer>
         </Slide>
     </Container>
   );
 };
 
-export default Education;
+export default Projects;

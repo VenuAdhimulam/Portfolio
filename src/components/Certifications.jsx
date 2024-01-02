@@ -3,33 +3,34 @@ import styled from "styled-components";
 import { mobile } from "../responsive";
 import Certificate from "./Certificate";
 import { certifications } from "../data";
+import Grid2 from "@mui/material/Unstable_Grid2/Grid2";
 
 const Container = styled.div`
   display: flex;
   align-items: center;
   background: #c1eec6;
-  // background: linear-gradient(180deg, #FFF, #c1eec6);
-  ${mobile({ padding: "10px" })}
+  ${mobile({ padding: "30px" })}
 `;
 
 const TitleDiv = styled.div`
-  flex: 0.5;
+  flex: 1;
   display: flex;
+  flex-direction: column;
   align-items: center;
-  margin-bottom: 120px;
   ${mobile({ marginBottom: "40px" })}
 `;
 
 const Title = styled.h1`
   font-size: 50px;
+  margin-bottom: 15px;
+  letter-spacing: 2px;
   ${mobile({ fontSize: "40px" })}
 `;
 
-const CardsContainer = styled.div`
-  flex: 1.5;
+const CardsContainer = styled(Grid2)`
+  flex: 1;
   display: flex;
-  padding: 0 65px 65px 65px;
-  margin: 20px 65px 65px 65px;
+  margin: 50px;
   flex-wrap: wrap;
   justify-content: space-between;
   ${mobile({ margin: 0, })}
@@ -37,13 +38,22 @@ const CardsContainer = styled.div`
 
 const Wrapper = styled.div`
   margin: 0px 50px;
-  padding: 0px 50px;
+  padding: 50px;
   display: flex;
   align-items: center;
   justify-content:center;
   flex-direction: row;
   ${mobile({ margin: 0, padding : 0, flexDirection: "column" })}
+`;
 
+const Desc = styled.p`
+  margin: 10px 0px;
+  font-weight: 500;
+  font-size: 1.2em;
+  color: rgba(0, 0, 0, 0.66);
+  letter-spacing: 3px;
+  line-height: 2;
+  text-align: justify;
 `;
 
 const Certifications = () => {
@@ -52,10 +62,13 @@ const Certifications = () => {
       <Wrapper>
         <TitleDiv>
           <Title>Certificates</Title>
+          <Desc>I hold certifications from various coding platforms, demonstrating proficiency in a variety of programming languages and frameworks. Moreover, I have successfully completed certification courses on online learning platforms.</Desc>
         </TitleDiv>
         <CardsContainer>
           {certifications.map((item) => (
-            <Certificate item={item} key={item.id} />
+            <Grid2 item xs={12}> 
+              <Certificate item={item} key={item.id} />
+            </Grid2>
           ))}
         </CardsContainer>
       </Wrapper>

@@ -67,7 +67,7 @@ const SocialIcon = styled.a`
   display: flex;
   align-items: center;
   justify-content: center;
-  margin-left: 20px;
+  margin: 6px;
 
   ${mobile({ width: "30px", height: "30px" })};
 `;
@@ -125,6 +125,34 @@ const Image = styled.img`
   border-radius: 50%;
 `;
 
+const EmailTag = styled.a`
+font-size: 1em;
+cursor: pointer;
+font-weight: 400;
+position: relative;
+color: #fff;
+text-decoration: none;
+
+&:after {
+  content: '';
+  display: block;
+  background-color: #add6b2; 
+  height: 3px;
+  width: 0;
+  position: absolute;
+  bottom: -5px;
+  transition: all 0.4s ease;
+}
+
+&:hover {
+  transform: scale(1.1);
+}
+
+&:hover:after {
+  width: 100%;
+}
+`;
+
 const GetSocialContainer = () => {
   
   return (
@@ -138,12 +166,12 @@ const GetSocialContainer = () => {
       <AnimatedSocialIcon color="263238" href="https://www.hackerrank.com/profile/VenuAdimulam">
         <Image src={Hackerrank} /> 
       </AnimatedSocialIcon>
-      <AnimatedSocialIcon color="263238" href="https://twitter.com/VenuAdimulam">
+      <AnimatedSocialIcon color="263238" href="https://leetcode.com/VenuAdimulam/">
+        <Image src={LeetCode} /> 
+      </AnimatedSocialIcon>
+      <AnimatedSocialIcon color="0f0f0f" href="https://twitter.com/VenuAdimulam">
         <Image src={TwitterLogo} /> 
       </AnimatedSocialIcon>
-      {/* <AnimatedSocialIcon color="263238" href="https://leetcode.com/VenuAdimulam/">
-        <Image src={LeetCode} /> 
-      </AnimatedSocialIcon> */}
     </SocialContainer>
   );
 };
@@ -167,10 +195,10 @@ const Footer = () => {
           <Right>
             <Title>Contact</Title>
             <ContactItem>
-              <Phone style={{ marginRight: "10px" }} /> +1 216 467 0834
+              <Phone style={{ marginRight: "20px" }} /> +1 216 467 0834
             </ContactItem>
             <ContactItem>
-              <Mail style={{ marginRight: "10px" }} /> <a style={{ color: "#fff", textDecoration: "none" }} href='mailto:venuadimulam01@gmail.com?body=Hello Venu Adimulam,'>venuadimulam01@gmail.com</a>
+              <Mail style={{ marginRight: "20px" }} /> <EmailTag href='mailto:venuadimulam01@gmail.com?body=Hello Venu Adimulam,'>venuadimulam01@gmail.com</EmailTag>
             </ContactItem>
             {isMobile ? GetSocialContainer(): null}
           </Right>

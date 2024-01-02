@@ -23,12 +23,12 @@ const Info = styled.div`
 const Container = styled.div`
   flex: 1;
   margin: 10px;
-  min-width: 181px;
-  height: 200px;
+  width: 160px;
+  height: 160px;
   display: flex;
   align-items: center;
   justify-content: center;
-  background-color: #f6fcf6;
+  background-color: #edfbee;
   position: relative;
   border-radius: 15px;
   box-shadow: 0.9px 0.9px 0.9px rgba(0.7, 0.7, 0.7, 0.7);
@@ -36,18 +36,26 @@ const Container = styled.div`
   &:hover ${Info} {
     opacity: 1;
   }
+
+  &:hover {
+    transition: all 0.2s ease;
+    transform: scale(1.1);
+  }
+
+  ${mobile({ width: "100px", height: "100px" })}
 `;
 
 const Circle = styled.div`
-  width: 150px;
-  height: 150px;
+  width: 100px;
+  height: 100px;
   border-radius: 50%;
   background-color: white;
   position: absolute;
+  ${mobile({ width: "75px", height: "75px" })}
 `;
 
 const Image = styled.img`
-  height: 50%;
+  height: 40%;
   z-index: 2;
   border-radius: 39%;
 `;

@@ -9,7 +9,7 @@ import VJIT_Logo from "./images/VJIT_Logo.png";
 import Drughelp_Logo from "./images/Drughelp_Logo.png";
 import Accenture_Logo from "./images/Accenture_Logo.png";
 import Ajna_Logo from "./images/Ajna_Logo.jpg";
-
+import JWT from "./images/svg/JWT.svg";
 import AWS from "./images/svg/AWS.svg";
 import BitBucket from "./images/svg/BitBucket.svg";
 import Bootstarp from "./images/svg/Bootstarp.svg";
@@ -33,6 +33,11 @@ import Tableau from "./images/svg/Tableau.svg";
 import VSCode from "./images/svg/VS_Code.svg";
 import IntellijIDE from "./images/svg/IntellijIdea.svg";
 import Jira from "./images/svg/Jira.svg";
+import MSSQL from "./images/svg/MSSQL.svg";
+import Laravel from "./images/Laravel.png";
+import Figma from "./images/Figma.png";
+import MongoDB from "./images/mongodb.svg";
+import SourceTree from "./images/svg/Sourcetree.svg";
 
 export const sliderItems = [
   {
@@ -61,7 +66,7 @@ export const eduObj = [
     university: "Vidya Jyothi Institute of Technology",
     tenure: "2014 - 2018",
     logo: VJIT_Logo,
-    logoSize: "135px"
+    logoSize: "120px"
   },
   // {
   //   id: 3,
@@ -90,16 +95,22 @@ export const aboutData = [
   }
 ];
 
-export const categories = [
+export const projectsData = [
   {
-    id: "1",
-    img: "https://i0.wp.com/thehhub.com/wp-content/uploads/2018/11/dom-hill-512919-unsplash.jpg?resize=1440%2C1993",
-    title: "HOODIE STYLE!",
+    id: 1,
+    title: "Expense Management",
+    desc: "Automates and streamlines the tracking, submission, approval, and management of expenses within an organization, developed with React.js & Laravel as key technologies.",
+    techStack: {
+      logos : [ Laravel, React, Redux, JavaScript, Firebase, Git, GoogleAnalytics, MySQL, VSCode ],
+    },
   },
   {
-    id: "2",
-    img: "http://intomodeling.com/img/commercial_mobile.jpg",
-    title: "LOUNGE LOVE",
+    id: 2,
+    title: "MERN Stack Project",
+    desc: "The project aimed to address eCommerce needs and was developed from scratch using the MERN stack technologies. Additionally, Bootstrap, Material-UI, Firebase, and the Stripe API were incorporated.",
+    techStack: {
+      logos : [ MongoDB, ExpressJS, React, NodeJS, Bootstarp, Stripe, Git, Firebase, VSCode],
+    },
   },
 ];
 
@@ -118,7 +129,7 @@ export const experiences = [
       ],
     },
     techStack: {
-      logos : [ React, Redux, JavaScript, AWS, Git, Jira, GoogleAnalytics, MySQL, VSCode ],
+      logos : [ React, Redux, Laravel, JavaScript, AWS, Git, SourceTree, Figma, Jira, GoogleAnalytics, MySQL, VSCode ],
     },
   },
   // {
@@ -226,3 +237,155 @@ export const certifications = [
   },
 ];
 
+export const techData = [
+  {
+    id: "1",
+    title: "React",
+    img: React,
+    height: 150,
+  },
+  {
+    id: "2",
+    title: "Redux",
+    img: Redux,
+    height: 30,
+  },
+  {
+    id: "3",
+    title: "Java",
+    img: Java,
+    height: 90,
+  },
+  {
+    id: "4",
+    title: "Spring Boot",
+    img: Springboot,
+    height: 70,
+  },
+  {
+    id: "5",
+    title: "Python",
+    img: Python_Logo,
+    height: 110,
+  },
+  {
+    id: "5",
+    title: "SQL",
+    img: SQL_Logo,
+    height: 150,
+  },
+  {
+    id: "6",
+    title: "HTML",
+    img: HTML,
+    height: 130,
+  },
+  {
+    id: "7",
+    title: "CSS",
+    img: CSS,
+    height: 80,
+  },
+  {
+    id: "8",
+    title: "JavaScript",
+    img: JavaScript,
+    height: 50,
+  },
+  {
+    id: "9",
+    title: "Bootstarp",
+    img: Bootstarp,
+    height: 90,
+  },
+  {
+    id: "10",
+    title: "Git",
+    img: Git,
+    height: 100,
+  },
+  {
+    id: "11",
+    title: "Jenkins",
+    img: Jenkins,
+    height: 150,
+  },
+  {
+    id: "12",
+    title: "Node JS",
+    img: NodeJS,
+    height: 30,
+  },
+  {
+    id: "13",
+    title: "Docker",
+    img: Docker,
+    height: 50,
+  },
+  {
+    id: "14",
+    title: "ExpressJS",
+    img: ExpressJS,
+    height: 80,
+  },
+  {
+    id: "15",
+    title: "Google Analytics",
+    img: GoogleAnalytics,
+    height: 60,
+  },
+  {
+    id: "16",
+    title: "JWT",
+    img: JWT,
+    height: 120,
+  },
+  {
+    id: "17",
+    title: "MSSQL",
+    img: MSSQL,
+    height: 80,
+  },
+  {
+    id: "18",
+    title: "Stripe",
+    img: Stripe,
+    height: 20,
+  },
+  {
+    id: "18",
+    title: "Tableau",
+    img: Tableau,
+    height: 150,
+  },
+  {
+    id: "19",
+    title: "Intellij",
+    img: IntellijIDE,
+    height: 110,
+  },
+  {
+    id: "20",
+    title: "VSCode",
+    img: VSCode,
+    height: 60,
+  },
+  {
+    id: "21",
+    title: "BitBucket",
+    img: BitBucket,
+    height: 80,
+  },
+  {
+    id: "22",
+    title: "Jira",
+    img: Jira,
+    height: 70,
+  },
+  {
+    id: "23",
+    title: "Firebase",
+    img: Firebase,
+    height: 30,
+  },
+];
