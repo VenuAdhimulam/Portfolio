@@ -1,13 +1,13 @@
 {
   "files": {
-    "main.js": "/Portfolio/static/js/main.9cf2b3b2.chunk.js",
-    "main.js.map": "/Portfolio/static/js/main.9cf2b3b2.chunk.js.map",
+    "main.js": "/Portfolio/static/js/main.e2841025.chunk.js",
+    "main.js.map": "/Portfolio/static/js/main.e2841025.chunk.js.map",
     "runtime-main.js": "/Portfolio/static/js/runtime-main.163f731f.js",
     "runtime-main.js.map": "/Portfolio/static/js/runtime-main.163f731f.js.map",
-    "static/js/2.6a0e8535.chunk.js": "/Portfolio/static/js/2.6a0e8535.chunk.js",
-    "static/js/2.6a0e8535.chunk.js.map": "/Portfolio/static/js/2.6a0e8535.chunk.js.map",
+    "static/js/2.4d77686d.chunk.js": "/Portfolio/static/js/2.4d77686d.chunk.js",
+    "static/js/2.4d77686d.chunk.js.map": "/Portfolio/static/js/2.4d77686d.chunk.js.map",
     "index.html": "/Portfolio/index.html",
-    "static/js/2.6a0e8535.chunk.js.LICENSE.txt": "/Portfolio/static/js/2.6a0e8535.chunk.js.LICENSE.txt",
+    "static/js/2.4d77686d.chunk.js.LICENSE.txt": "/Portfolio/static/js/2.4d77686d.chunk.js.LICENSE.txt",
     "static/media/AWS.e67fd2c1.svg": "/Portfolio/static/media/AWS.e67fd2c1.svg",
     "static/media/AWS_Cloud_Computing.452652bb.png": "/Portfolio/static/media/AWS_Cloud_Computing.452652bb.png",
     "static/media/Accenture_Logo.53de8e7c.png": "/Portfolio/static/media/Accenture_Logo.53de8e7c.png",
@@ -64,7 +64,7 @@
   },
   "entrypoints": [
     "static/js/runtime-main.163f731f.js",
-    "static/js/2.6a0e8535.chunk.js",
-    "static/js/main.9cf2b3b2.chunk.js"
+    "static/js/2.4d77686d.chunk.js",
+    "static/js/main.e2841025.chunk.js"
   ]
 }
