@@ -1,7 +1,7 @@
 {
   "files": {
-    "main.js": "/Portfolio/static/js/main.a4932155.chunk.js",
-    "main.js.map": "/Portfolio/static/js/main.a4932155.chunk.js.map",
+    "main.js": "/Portfolio/static/js/main.6952136e.chunk.js",
+    "main.js.map": "/Portfolio/static/js/main.6952136e.chunk.js.map",
     "runtime-main.js": "/Portfolio/static/js/runtime-main.163f731f.js",
     "runtime-main.js.map": "/Portfolio/static/js/runtime-main.163f731f.js.map",
     "static/js/2.6a0e8535.chunk.js": "/Portfolio/static/js/2.6a0e8535.chunk.js",
@@ -51,7 +51,7 @@
     "static/media/VJIT_Logo.cb806ae8.png": "/Portfolio/static/media/VJIT_Logo.cb806ae8.png",
     "static/media/VS_Code.52a8d9ba.svg": "/Portfolio/static/media/VS_Code.52a8d9ba.svg",
     "static/media/VenuAdimulam.244cfc74.pdf": "/Portfolio/static/media/VenuAdimulam.244cfc74.pdf",
-    "static/media/education_Logo.8b5f3646.svg": "/Portfolio/static/media/education_Logo.8b5f3646.svg",
+    "static/media/education_Logo.9005259e.svg": "/Portfolio/static/media/education_Logo.9005259e.svg",
     "static/media/git-branch.1a25920a.svg": "/Portfolio/static/media/git-branch.1a25920a.svg",
     "static/media/main_Logo.f73b3127.svg": "/Portfolio/static/media/main_Logo.f73b3127.svg",
     "static/media/mongodb.0781b723.svg": "/Portfolio/static/media/mongodb.0781b723.svg",
@@ -61,6 +61,6 @@
   "entrypoints": [
     "static/js/runtime-main.163f731f.js",
     "static/js/2.6a0e8535.chunk.js",
-    "static/js/main.a4932155.chunk.js"
+    "static/js/main.6952136e.chunk.js"
   ]
 }
