@@ -22,7 +22,6 @@ const Slide = styled.div`
   width: 100%;
   height: 100%;
   background: #fff;
-  mix-blend-mode: hard-light;
   padding: 50px;
   margin: 25px 50px;
   ${mobile({ padding: 0, margin: "10px", marginTop: "20px"})};
@@ -78,14 +77,14 @@ const CourseTypo = styled.p`
 const TitleDiv = styled.div`
   padding: 10px;
   border-radius: 8px;
-  margin: 15xpx 0px;
+  margin: 15px 0px;
   display: flex;
   ${mobile({ justifyContent: "center" })}
 `;
 
 const BodyDiv = styled.div`
   border-radius: 8px;
-  margin: 15xpx 0px;
+  margin: 15px 0px;
 `;
 
 const BoxDiv = styled.div`

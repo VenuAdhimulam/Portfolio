@@ -17,7 +17,8 @@ const TitleDiv = styled.div`
   display: flex;
   flex-direction: column;
   align-items: center;
-  ${mobile({ marginBottom: "40px" })}
+  margin: 50px;
+  ${mobile({ margin: 0, marginBottom: "40px", })}
 `;
 
 const Title = styled.h1`
@@ -34,13 +35,12 @@ const CardsContainer = styled(Grid2)`
   margin: 50px;
   flex-wrap: wrap;
   justify-content: center;
-  ${mobile({ margin: 0, })}
+  ${mobile({ margin: 0 })}
   ${mobileLandScape({ margin: 20})}
 `;
 
 const Wrapper = styled.div`
-  margin: 0px 50px;
-  padding: 50px;
+  margin: 50px;
   display: flex;
   align-items: center;
   justify-content:center;

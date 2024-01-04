@@ -23,8 +23,8 @@ const Info = styled.div`
 const Container = styled.div`
   flex: 1;
   margin: 10px;
-  width: 160px;
-  height: 160px;
+  width: 120px;
+  height: 120px;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -42,13 +42,13 @@ const Container = styled.div`
     transform: scale(1.1);
   }
 
-  ${mobile({ width: "100px", height: "100px" })}
+  ${mobile({ margin: "5px", width: "100px", height: "100px" })}
   ${mobileLandScape({ width: "100px", height: "100px" })};
 `;
 
 const Circle = styled.div`
-  width: 100px;
-  height: 100px;
+  width: 90px;
+  height: 90px;
   border-radius: 50%;
   background-color: white;
   position: absolute;

@@ -23,7 +23,6 @@ const Slide = styled.div`
   width: 100%;
   height: 100%;
   background: #fff;
-  mix-blend-mode: hard-light;
   padding: 50px;
   margin: 25px 50px;
   ${mobile({ padding: 0, margin: "10px", marginTop: "20px"})};
