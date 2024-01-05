@@ -2,7 +2,7 @@
 
 Welcome to my Full Stack Developer portfolio! 👋 I'm Venu Adimulam, a passionate and detail-oriented developer with expertise in both front-end and back-end technologies. I love turning ideas into robust, scalable, and user-friendly applications.
 
-URL: https://venuadhimulam.github.io/Portfolio/
+URL: https://venuadhimulam.github.io/
 
 ## About Me
 
