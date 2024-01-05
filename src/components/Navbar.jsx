@@ -130,24 +130,24 @@ const Navbar = () => {
         </Center> */}
         {!isMobile ? (
          <Grid item xs={6} sx={Right}>
-          <MenuItems smooth={true} duration={2000} to="home" >Home</MenuItems>
-          <MenuItems smooth={true} duration={2000} to="about" >About</MenuItems>
-          <MenuItems smooth={true} duration={2000} to="experience" >Experience</MenuItems>
-          <MenuItems smooth={true} duration={2000} to="projects" >Projects</MenuItems>
-          <MenuItems smooth={true} duration={2000} to="education" >Education</MenuItems>
-          <MenuItems smooth={true} duration={2000} to="certificates" >Certificates</MenuItems>
+          <MenuItems smooth={true} duration={2000} spy={true}  offset={-70} to="home" >Home</MenuItems>
+          <MenuItems smooth={true} duration={2000} spy={true}  offset={-120} to="about" >About</MenuItems>
+          <MenuItems smooth={true} duration={2000} spy={true}  offset={-20} to="experience" >Experience</MenuItems>
+          <MenuItems smooth={true} duration={2000} spy={true}  offset={-100} to="projects" >Projects</MenuItems>
+          <MenuItems smooth={true} duration={2000} spy={true}  offset={-20} to="education" >Education</MenuItems>
+          <MenuItems smooth={true} duration={2000} spy={true}  offset={-20} to="certificates" >Certificates</MenuItems>
        </Grid>
         ) : (
           <>
             <Grid item xs={6} sx={{ ...Right, ...{ display: "flex", marginTop: '20px', justifyContent: "space-evenly" } }}>
-              <MenuItems smooth={true} duration={2000} to="home" >Home</MenuItems>
-              <MenuItems smooth={true} duration={2000} to="about" >About</MenuItems>
-              <MenuItems smooth={true} duration={2000} to="experience" >Experience</MenuItems>
+              <MenuItems smooth={true} duration={2000} spy={true} offset={-150} to="home" >Home</MenuItems>
+              <MenuItems smooth={true} duration={2000} spy={true} offset={-100} to="about" >About</MenuItems>
+              <MenuItems smooth={true} duration={2000} spy={true} offset={-70} to="experience" >Experience</MenuItems>
             </Grid>
             <Grid item xs={6} sx={{ ...Right, ...{ display: "flex", marginTop: '20px', justifyContent: "space-evenly" } }}>
-              <MenuItems smooth={true} duration={2000} to="projects" >Projects</MenuItems>
-              <MenuItems smooth={true} duration={2000} to="education" >Education</MenuItems>
-              <MenuItems smooth={true} duration={2000} to="certificates" >Certificates</MenuItems>
+              <MenuItems smooth={true} duration={2000} spy={true} offset={-110} to="projects" >Projects</MenuItems>
+              <MenuItems smooth={true} duration={2000} spy={true} offset={-90} to="education" >Education</MenuItems>
+              <MenuItems smooth={true} duration={2000} spy={true} offset={-120} to="certificates" >Certificates</MenuItems>
             </Grid>
           </>
         )}

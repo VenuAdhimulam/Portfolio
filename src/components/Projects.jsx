@@ -23,8 +23,8 @@ const Slide = styled.div`
   width: 100%;
   height: 100%;
   background: #fff;
-  padding: 50px;
-  margin: 25px 50px;
+  padding: 0px 50px;
+  margin: 0px 50px;
   ${mobile({ padding: 0, margin: "10px", marginTop: "20px"})};
   ${mobileLandScape({ padding: 0, margin: "10px", marginTop: "20px"})};
 `;

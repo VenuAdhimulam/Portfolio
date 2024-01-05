@@ -23,8 +23,8 @@ const Slide = styled.div`
   height: 100%;
   background: #fff;
   padding: 50px;
-  margin: 25px 50px;
-  ${mobile({ padding: 0, margin: "10px", marginTop: "20px"})};
+  margin: 0px 50px;
+  ${mobile({ padding: 0, margin: "15px"})};
 `;
 
 const ImgContainer = styled.div`
@@ -54,7 +54,7 @@ const Title = styled.h1`
   font-size: 50px;
   margin-bottom: 20px;
   letter-spacing: 2px;
-  ${mobile({ "font-size": "40px" })}
+  ${mobile({ "font-size": "40px",   marginBottom: "0px"})}
   ${mobileLandScape({ "font-size": "40px" })}
 `;
 
@@ -84,7 +84,7 @@ const TitleDiv = styled.div`
 
 const BodyDiv = styled.div`
   border-radius: 8px;
-  margin: 15px 0px;
+  margin: 0px 0px;
 `;
 
 const BoxDiv = styled.div`
@@ -142,31 +142,31 @@ const Education = () => {
 
   return (
     <Container id="education">
-        <Slide>
-          <InfoContainer>
-            <TitleDiv>
-              <Title>Education<span style={{color: "#c1eec7"}}></span></Title>
-            </TitleDiv>
-            <BodyDiv>
-              {eduObj.map((item) => (
-                <Paper variant="elevation" className={classes.paper}>
-                  <DescDiv>
-                    <Desc>{item.degree}</Desc>
-                    <CourseTypo>{item.stream}</CourseTypo>
-                    <Desc>{item.university}</Desc>
-                    <Desc>{item.tenure}</Desc>
-                  </DescDiv>
-                  <LogoDiv>
-                    <Logo src={item.logo} size={isMobile ? "80px !important" : item.logoSize}/>
-                  </LogoDiv>
-                </Paper>
-              ))}
-            </BodyDiv>
-          </InfoContainer>
-          <ImgContainer>
-            <Image src={Education_Logo} />
-          </ImgContainer>
-        </Slide>
+      <Slide>
+        <InfoContainer>
+          <TitleDiv>
+            <Title>Education<span style={{color: "#c1eec7"}}></span></Title>
+          </TitleDiv>
+          <BodyDiv>
+            {eduObj.map((item) => (
+              <Paper variant="elevation" className={classes.paper}>
+                <DescDiv>
+                  <Desc>{item.degree}</Desc>
+                  <CourseTypo>{item.stream}</CourseTypo>
+                  <Desc>{item.university}</Desc>
+                  <Desc>{item.tenure}</Desc>
+                </DescDiv>
+                <LogoDiv>
+                  <Logo src={item.logo} size={isMobile ? "80px !important" : item.logoSize}/>
+                </LogoDiv>
+              </Paper>
+            ))}
+          </BodyDiv>
+        </InfoContainer>
+        <ImgContainer>
+          <Image src={Education_Logo} />
+        </ImgContainer>
+      </Slide>
     </Container>
   );
 };
