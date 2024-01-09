@@ -24,7 +24,7 @@ const Slide = styled.div`
   height: 100%;
   background: #fff;
   padding: 0px 50px;
-  margin: 0px 50px;
+  margin: 25px 50px;
   ${mobile({ padding: 0, margin: "10px", marginTop: "20px"})};
   ${mobileLandScape({ padding: 0, margin: "10px", marginTop: "20px"})};
 `;
@@ -119,7 +119,8 @@ const useStyles = makeStyles((theme) => ({
     margin: "20px",
     padding: "15px",
     borderRadius: "8px",
-    boxShadow: "0.8px 0.8px 0.8px rgba(0, 0, 0, 0.4)",
+    // boxShadow: "0.8px 0.8px 0.8px rgba(0, 0, 0, 0.4)",
+    boxShadow: "0 3px 12px 0 rgba(53, 53, 53, 0.3)",
     // borderRight: "4px solid #c1eec6",
     // borderLeft: "4px solid #c1eec6",
     background: "linear-gradient(180deg, #edfbee, #FFF, #FFF)",

@@ -11,7 +11,7 @@ const Info = styled.div`
   top: 0;
   left: 0;
   border-radius: 15px;
-  background-color: rgba(0, 0, 0, 0.2);
+  background-color: rgba(0, 0, 0, 0.4);
   z-index: 3;
   display: flex;
   align-items: center;
@@ -31,7 +31,8 @@ const Container = styled.div`
   background-color: #edfbee;
   position: relative;
   border-radius: 15px;
-  box-shadow: 0.9px 0.9px 0.9px rgba(0.7, 0.7, 0.7, 0.7);
+  // box-shadow: 0.9px 0.9px 0.9px rgba(0.7, 0.7, 0.7, 0.7);
+  box-shadow: 0 3px 12px 0 rgba(53, 53, 53, 0.3);
 
   &:hover ${Info} {
     opacity: 1;

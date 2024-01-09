@@ -55,8 +55,8 @@ const Slide = styled.div`
   justify-content: center;
   border-radius: 30px;
   background: #fff;
-  box-shadow: 0.5px 0.5px 0.5px rgba(0, 0, 0, 0.4);
-
+  // box-shadow: 0.5px 0.5px 0.5px rgba(0, 0, 0, 0.4);
+  box-shadow: 0 3px 12px 0 rgba(53, 53, 53, 0.3);
   ${mobile({ width: "80vw" })};
   ${mobileLandScape({ width: "80vw" })};
 `;

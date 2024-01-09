@@ -94,7 +94,8 @@ const BoxDiv = styled.div`
   border-left: 6px solid #c1eec6;
   padding: 15px;
   border-radius: 8px;
-  box-shadow: 0.8px 0.8px 0.8px rgba(0, 0, 0, 0.4);
+  // box-shadow: 0.8px 0.8px 0.8px rgba(0, 0, 0, 0.4);
+  box-shadow: 0 3px 12px 0 rgba(53, 53, 53, 0.3);
 `;
 
 const DescDiv = styled.div`
@@ -124,7 +125,9 @@ const useStyles = makeStyles((theme) => ({
     margin: "30px 5px",
     padding: "15px",
     borderRadius: "8px",
-    boxShadow: "0.8px 0.8px 0.8px rgba(0, 0, 0, 0.4)",
+    // boxShadow: "0.8px 0.8px 0.8px rgba(0, 0, 0, 0.4)",
+    boxShadow: "0 3px 12px 0 rgba(53, 53, 53, 0.3)",
+
     // borderRight: "4px solid #c1eec6",
     borderLeft: "4px solid #edfbee",
     background: "linear-gradient(90deg, #edfbee, #FFF, #FFF)",
