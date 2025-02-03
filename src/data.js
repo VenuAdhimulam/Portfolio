@@ -92,9 +92,7 @@ export const aboutData = [
     id: 1,
     title: "About Me",
     img: Python_Logo,
-    desc: `I'm a Software Engineer known for building sophisticated web applications,
-           adhering to best practices in software development, 
-           producing readable code, and eager to continue learning.`,
+    desc: `Hey, I'm a Software Engineer with a Master's in Computer Science, passionate about building web applications and writing clean, efficient code. Always eager to learn and grow.`,
     bg: "#f7f7f7",
   }
 ];
